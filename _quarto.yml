@@ -14,7 +14,6 @@ website:
         style: "docked"
         collapse-level: 1
         border: true
-        title: "CSCI 0200: Math Foundations of Computing (F24)"
         contents:
             - syllabus.qmd
             - schedule.qmd

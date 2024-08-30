@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -94,11 +94,6 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">CSCI 0200: Math Foundations of Computing (F24)</a> 
-    </div>
-      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -158,11 +153,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#logic-and-set-theory" id="toc-logic-and-set-theory" class="nav-link active" data-scroll-target="#logic-and-set-theory">Logic and Set Theory</a></li>
+  <li><a href="#proof-writing" id="toc-proof-writing" class="nav-link" data-scroll-target="#proof-writing">Proof-Writing</a></li>
+  <li><a href="#counting" id="toc-counting" class="nav-link" data-scroll-target="#counting">Counting</a></li>
+  <li><a href="#probability" id="toc-probability" class="nav-link" data-scroll-target="#probability">Probability</a></li>
+  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs">Graphs</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -183,42 +188,193 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">Targets <strong>LS1-3</strong> are introduced on Quiz 1. Targets <strong>PF1</strong>, <strong>PF2</strong>, and <strong>FR1</strong> are introduced on Quiz 2. Targets <strong>C1</strong>, <strong>C2</strong>, and <strong>R1</strong> are introduced on Quiz 3. Targets <strong>G1</strong>, <strong>P1</strong>, and <strong>P2</strong> are introduced on Quiz 4.</span></div></div>
-<p><strong>Logic and Sets </strong></p>
-<ul>
-<li><strong>LS1</strong>: I can simplify and evaluate logical expressions that include quantifiers and boolean operations.</li>
-<li><strong>LS2</strong>: I can represent sets in set-builder notation; determine whether an object is an element of a set; and prove that one set is equal to or a subset of another.</li>
-<li><strong>LS3</strong>: I can perform operations on sets (intersection, union, complement, difference, Cartesian product) and determine the cardinality of a set.</li>
-</ul>
-<p><strong>Proofs </strong></p>
-<ul>
-<li><strong>PF1</strong>: I can use direct proof, proof by cases, and proof-by-contradiction to prove mathematical statements.</li>
-<li><strong>PF2</strong>: I can choose between weak and strong induction and write correct inductive proofs that include both a base case and an inductive step.</li>
-</ul>
-<p><strong>Functions and Relations</strong></p>
-<ul>
-<li><strong>FR1</strong>: I can determine whether or not a given relation is an equivalence relation.</li>
-</ul>
-<p><strong>Counting</strong></p>
-<ul>
-<li><strong>C1</strong>: I can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems.</li>
-<li><strong>C2</strong>: I can use permutations and combinations to count the number of candidate solutions to a given problem.</li>
-</ul>
-<p><strong>Recursion and Recurrence Relations</strong></p>
-<ul>
-<li><strong>R1</strong>: I can use recurrence relations to model and analyze simple mathematical processes and algorithms.</li>
-</ul>
-<p><strong>Graphs</strong></p>
-<ul>
-<li><strong>G1</strong>: I can write correct proofs of simple mathematical propositions about the structure of graphs.</li>
-</ul>
-<p><strong>Probability</strong></p>
-<ul>
-<li><strong>PR1</strong>: I can evaluate marginal, joint, and conditional probabilities of events on discrete sample spaces.</li>
-<li><strong>PR2</strong>: I can evaluate expectations of random variables on discrete sample spaces.</li>
-</ul>
+<section id="logic-and-set-theory" class="level2">
+<h2 class="anchored" data-anchor-id="logic-and-set-theory">Logic and Set Theory</h2>
+<table>
+<tbody><tr>
+<th>
+L1:
+</th>
+<td>
+I can use quantified logic to express English sentences and mathematical concepts.
+</td>
+</tr>
+<tr>
+<th>
+L2:
+</th>
+<td>
+I can correctly simplify logical expressions which include quantifiers, negations (NOT), conjunctions (AND), disjunctions (OR), and implications.
+</td>
+</tr>
+<tr>
+<th>
+L3:
+</th>
+<td>
+I can use rules of logical inference to determine whether a conclusion follows logically from a set of premises.
+</td>
+</tr>
+<tr>
+<th>
+S1:
+</th>
+<td>
+I can describe sets using both roster and set-builder notations.
+</td>
+</tr>
+<tr>
+<th>
+S2:
+</th>
+<td>
+I can perform operations on sets (union, intersection, difference, complement) and determine the cardinality of a set.
+</td>
+</tr>
+</tbody></table>
+</section>
+<section id="proof-writing" class="level2">
+<h2 class="anchored" data-anchor-id="proof-writing">Proof-Writing</h2>
+<table>
+<tbody><tr>
+<th>
+PF1:
+</th>
+<td>
+I can use the element method to prove that one set is a subset of another, or that two sets are equal.
+</td>
+</tr>
+<tr>
+<th>
+PF2:
+</th>
+<td>
+I can prove mathematical statements using proof-by-contradiction.
+</td>
+</tr>
+<tr>
+<th>
+PF3:
+</th>
+<td>
+I can correctly state the base case and inductive hypothesis in a proof by weak induction.
+</td>
+</tr>
+<tr>
+<th>
+PF4:
+</th>
+<td>
+I can prove the base case and inductive hypothesis in a proof by weak induction when they are supplied to me.
+</td>
+</tr>
+<tr>
+<th>
+PF5:
+</th>
+<td>
+I can write a complete proof by weak induction.
+</td>
+</tr>
+<tr>
+<th>
+PF6:
+</th>
+<td>
+I can write a complete proof by strong induction.
+</td>
+</tr>
+<tr>
+<th>
+FR1:
+</th>
+<td>
+I can prove that a supplied relation is or is not an equivalence relation.
+</td>
+</tr>
+</tbody></table>
+</section>
+<section id="counting" class="level2">
+<h2 class="anchored" data-anchor-id="counting">Counting</h2>
+<table>
+<tbody><tr>
+<th>
+C1: &nbsp;
+</th>
+<td>
+I can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems.
+</td>
+</tr>
+<tr>
+<th>
+C2:
+</th>
+<td>
+I can use permutations and combinations to count the number of candidate solutions to a given problem.
+</td>
+</tr>
+<tr>
+<th>
+R1:
+</th>
+<td>
+I can describe a mathematical process or algorithm using a recurrence relation.
+</td>
+</tr>
+<tr>
+<th>
+R2:
+</th>
+<td>
+I can use the tree method to determine the asymptotic runtime of a recursive algorithm.
+</td>
+</tr>
+</tbody></table>
+</section>
+<section id="probability" class="level2">
+<h2 class="anchored" data-anchor-id="probability">Probability</h2>
+<table>
+<tbody><tr>
+<th>
+PR1:
+</th>
+<td>
+I can evaluate marginal, and joint probabilities of events on discrete sample spaces.
+</td>
+</tr>
+<tr>
+<th>
+PR2:
+</th>
+<td>
+I can use Bayes’ Theorem to evaluate conditional probabilities.
+</td>
+</tr>
+<tr>
+<th>
+PR3:
+</th>
+<td>
+I can evaluate expectations of random variables on discrete sample spaces.
+</td>
+</tr>
+</tbody></table>
+</section>
+<section id="graphs" class="level2">
+<h2 class="anchored" data-anchor-id="graphs">Graphs</h2>
+<table>
+<tbody><tr>
+<th>
+G1:
+</th>
+<td>
+I can write correct proofs of simple mathematical propositions about the structure of graphs.
+</td>
+</tr>
+</tbody></table>
 
 
+</section>
 
 <p><br> <br> <span style="color:grey;">© Phil Chodrow, 2024</span></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

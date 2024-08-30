@@ -2,41 +2,193 @@
 title: Learning Targets
 ---
 
-[Targets **LS1-3** are introduced on Quiz 1. Targets **PF1**, **PF2**, and **FR1** are introduced on Quiz 2. Targets **C1**, **C2**, and **R1** are introduced on Quiz 3. Targets **G1**, **P1**, and **P2** are introduced on Quiz 4.]{.aside}
  
-**Logic and Sets **
+## Logic and Set Theory
 
-- **LS1**: I can simplify and evaluate logical expressions that include quantifiers and boolean operations. 
-- **LS2**: I can represent sets in set-builder notation; determine whether an object is an element of a set; and prove that one set is equal to or a subset of another. 
-- **LS3**: I can perform operations on sets (intersection, union, complement, difference, Cartesian product) and determine the cardinality of a set. 
+<table>
+    <tr>
+        <th>
+            L1:
+        </th>
+        <td>
+            I can use quantified logic to express English sentences and mathematical concepts.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            L2:
+        </th>
+        <td>
+            I can correctly simplify logical expressions which include quantifiers, negations (NOT), conjunctions (AND), disjunctions (OR), and implications.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            L3:
+        </th>
+        <td> 
+            I can use rules of logical inference to determine whether a conclusion follows logically from a set of premises. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            S1:
+        </th>
+        <td>
+            I can describe sets using both roster and set-builder notations. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            S2:
+        </th>
+        <td>
+            I can perform operations on sets (union, intersection, difference, complement) and determine the cardinality of a set.
+        </td>
+    </tr>
+</table>
 
-**Proofs **
+## Proof-Writing
 
-- **PF1**: I can use direct proof, proof by cases, and proof-by-contradiction to prove mathematical statements. 
-- **PF2**: I can choose between weak and strong induction and write correct inductive proofs that include both a base case and an inductive step. 
+<table>
+    <tr>
+        <th>
+            PF1: 
+        </th>
+        <td>
+            I can use the element method to prove that one set is a subset of another, or that two sets are equal. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF2:
+        </th>
+        <td>
+            I can prove mathematical statements using proof-by-contradiction.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF3:
+        </th>
+        <td>
+            I can correctly state the base case and inductive hypothesis in a proof by weak induction. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF4:
+        </th>
+        <td>
+            I can prove the base case and inductive hypothesis in a proof by weak induction when they are supplied to me. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF5:
+        </th>
+        <td>
+            I can write a complete proof by weak induction. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF6:
+        </th>
+        <td>
+            I can write a complete proof by strong induction.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            FR1:
+        </th>
+        <td>
+            I can prove that a supplied relation is or is not an equivalence relation.
+        </td>
+    </tr>
+</table>
 
-**Functions and Relations**
 
-- **FR1**: I can determine whether or not a given relation is an equivalence relation. 
+## Counting
+
+<table>
+    <tr>
+        <th>
+            C1: &nbsp;
+        </th>
+        <td>
+            I can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            C2:
+        </th>
+        <td>
+            I can use permutations and combinations to count the number of candidate solutions to a given problem. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            R1:
+        </th>
+        <td>
+            I can describe a mathematical process or algorithm using a recurrence relation. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            R2:
+        </th>
+        <td>
+            I can use the tree method to determine the asymptotic runtime of a recursive algorithm. 
+        </td>
+    </tr>
+</table>
 
 
-**Counting** 
+## Probability
 
-- **C1**: I can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems. 
-- **C2**: I can use permutations and combinations to count the number of candidate solutions to a given problem. 
+<table>
+    <tr>
+        <th>
+            PR1:
+        </th>
+        <td>
+            I can evaluate marginal, and joint probabilities of events on discrete sample spaces. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PR2:
+        </th>
+        <td>
+            I can use Bayes' Theorem to evaluate conditional probabilities.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PR3:
+        </th>
+        <td>
+            I can evaluate expectations of random variables on discrete sample spaces. 
+        </td>
+    </tr>
+</table>
 
-**Recursion and Recurrence Relations**
+## Graphs 
 
-- **R1**: I can use recurrence relations to model and analyze simple mathematical processes and algorithms. 
+<table>
+    <tr>
+        <th>
+            G1:
+        </th>
+        <td>
+            I can write correct proofs of simple mathematical propositions about the structure of graphs. 
+        </td>
+    </tr>
+</table>
 
-
-**Graphs**
-
-- **G1**: I can write correct proofs of simple mathematical propositions about the structure of graphs. 
-
-**Probability**
-
-- **PR1**: I can evaluate marginal, joint, and conditional probabilities of events on discrete sample spaces. 
-- **PR2**: I can evaluate expectations of random variables on discrete sample spaces. 
 
 
