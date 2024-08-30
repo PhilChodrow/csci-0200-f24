@@ -1,0 +1,45 @@
+---
+title: "Cases, Contradictions, and Counterexamples"
+---
+
+## Videos (~30 minutes)
+
+- [Proof by Division into Cases](https://youtu.be/2A-EaY78bwc?si=e2r6--rJX-Ks5qX3) (5:40)
+- [Proof by Contradiction](https://youtu.be/huGWXh4l1M0?si=4Uc3GiC-d48OSjCt) (8:59)
+- [Disproving Implications with Counterexamples](https://youtu.be/TcfVpnRRAvk?si=UpHr6TadFGIhR8pK) (8:18)
+
+
+## Reading (~30 minutes)
+
+- [DMOI Chapter 3.2](https://discrete.openmathbooks.org/dmoi3/sec_logic-proofs.html), to the end (new stuff starts at "Proof by Contradiction")
+ 
+## Warmup (~40 minutes)
+
+### Problem 1
+
+{{< include ../../../content/problems/proofs/counterexamples.qmd >}}
+
+### Problem 2
+
+{{< include ../../../content/problems/proofs/contradiction.qmd >}}
+
+**Notes**: 
+
+- A fraction $\frac{a}{b}$ is in *lowest terms* if there is no integer $k$ that divides both $a$ and $b$. 
+- It is traditional in math classes that you can use anything you have previously proven. You might find a problem from the last warmup to be helpful. 
+- It is also traditional that you may "use without proof" facts that the instructor tells you are acceptable to use without proof. In this case, you may use without proof the fact that, for any integer $n$, it is the case that $n^2$ is even if and only if $n$ is even. 
+
+### Problem 3
+
+{{< include ../../../content/problems/proofs/cases.qmd >}}
+
+**Hint**: Divide into cases based on whether $n$ is odd or even. 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+---
+title: Calculating Your Grade
+---
+
+
+### Calculating Your Grade
+
+You can use the table below to visualize your progress based on your quiz problems and the assignment feedback you've received. [This table doesn't take into account [penalties for missing warmups](#assessment-of-warmups).]{.aside}
+
+**Instructions**: 
+
+- Check off **Learning Targets** as you go, starting from the bottom. For example, once you've checked off 6 learning targets you have filled the "C" row, and once you've checked off 8 learning targets you have filled the "B" row. 
+- Check off **Labs** as you get receive feedback. When you receive an assessmment on a lab, you can check off that lab **up to once in each grade tier**. For example, if you receive an **M**, you can check off one box for "M or E" in each of Tiers A, B, and C. If you receive an **E**, you can check off one box for **E** in Tiers A and B, and one box for **M or E** in Tier C. **R**'s can only be used to check off boxes in the second row of Tier C. 
+
+Once *all* boxes in a row are checked, you have earned that grade in the course, *provided* that you have missed no more than 3 warmup activities.  
+
+
++-----+---------------------------------+-------------------------------+
+|Tier | Learning Targets                | Labs                          |
++:====+=================================+===============================+
+|**A**|   &#9634; &#9634; &#9634;       | **E**: &#9634; &#9634;        |
+|     |                                 |  &#9634; &#9634;<br>          |
+|     |                                 | **M or E**: &#9634; &#9634;   |
+|     |                                 | &#9634;                       |
+|     |                                 |                               |
++-----+---------------------------------+-------------------------------+
+|**B**|   &#9634; &#9634;               | **E**: &#9634; &#9634;<br>    |
+|     |                                 | **M or E**: &#9634; &#9634;   |
+|     |                                 | &#9634; &#9634; &#9634;       |
+|     |                                 |                               |
++-----+---------------------------------+-------------------------------+
+|**C**|   &#9634; &#9634; &#9634;       | **M or E**: &#9634; &#9634;   |
+|     |   &#9634; &#9634; &#9634;       | &#9634; &#9634; &#9634;       |
+|     |                                 |             <br>              |
+|     |                                 | **R, M, or E**: &#9634;       |
+|     |                                 | &#9634;                       |
++-----+---------------------------------+-------------------------------+
+
+::: {.aside}
+
+Here's an example for a student who completed 9 learning targets, earned "Exemplary" on five labs, and earned "Meets Expectations" on three labs. 
+
++-----+---------------------------------+-------------------------------+
+|Tier | Learning Targets                | Labs                          |
++:====+=================================+===============================+
+|**A**|   &#9634; &#9634; &#9745;       | **E**: &#9745; &#9745;        |
+|     |                                 |  &#9745; &#9745;<br>          |
+|     |                                 | **M or E**: &#9745; &#9745;   |
+|     |                                 | &#9745;                       |
+|     |                                 |                               |
++-----+---------------------------------+-------------------------------+
+|**B**|   &#9745; &#9745;               | **E**: &#9745; &#9745;<br>    |
+|     |                                 | **M or E**: &#9745; &#9745;   |
+|     |                                 | &#9745; &#9745; &#9745;       |
+|     |                                 |                               |
++-----+---------------------------------+-------------------------------+
+|**C**|   &#9745; &#9745; &#9745;       | **M or E**: &#9745; &#9745;   |
+|     |   &#9745; &#9745; &#9745;       | &#9745; &#9745; &#9745;       |
+|     |                                 |             <br>              |
+|     |                                 | **R, M, or E**: &#9745;       |
+|     |                                 | &#9745;                       |
++-----+---------------------------------+-------------------------------+
+
+This student fully meets the requirements of a **B** and partially meets the requirements of an **A**, and therefore earns an **A-** (provided they have missed no more than 3 warmups). 
+
+:::

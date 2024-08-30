@@ -1,0 +1,37 @@
+---
+title: "Linear Recurrence Relations and the Fibonacci Numbers"
+---
+ 
+# Videos (~10 mins)
+
+Review: 
+
+- [The Fibonacci Sequence](https://youtu.be/qmm9GPhA1MY?si=fmv3XTap98XC-ypc) (6:22)
+
+# Reading (~30 mins)
+
+Useful Review: 
+
+- [DMOI 2.1](https://discrete.openmathbooks.org/dmoi3/sec_seq_intro.html)
+- [DMOI 2.3](https://discrete.openmathbooks.org/dmoi3/sec_recurrence.html) 
+
+# Warmup (~50 mins)
+
+## Problem 1
+
+{{< include ../../../content/problems/recursion-recurrence/fibonacci-1.qmd >}}
+
+***Note***: *This is a famous result with an easily-researched answer. So, the important part is showing your work and making sure you are familiar with tools like the quadratic formula.*
+
+\pagebreak
+
+## Problem 2
+
+{{< include ../../../content/problems/recursion-recurrence/fibonacci-2.qmd >}}
+
+***Note***: *Don't forget to include both a base case and an inductive step!* 
+
+
+
+
+

@@ -1,0 +1,105 @@
+---
+title: |
+    Solutions: Introducing Graphs and Graph Theory
+solution: true
+format: 
+  pdf: 
+    callout-icon: false
+    callout-appearance: simple
+---
+
+## Problem 1
+
+Consider the sequence of integers: 
+
+$$
+\begin{aligned}
+    (4, 4, 3, 2, 2, 2, 1, 1)
+\end{aligned}
+$$
+
+Could this sequence be the degree sequence of a graph? If so, find the number of nodes and edges in this graph. 
+
+::: {.content-visible when-meta='solution'}
+::: {.callout-note}
+
+This can't be the degree sequence of a graph because the sum of the degrees is odd. 
+
+:::
+:::
+
+
+::: {.content-hidden when-meta='solution'}
+
+
+\vspace{3cm}
+
+:::
+
+
+\pagebreak
+
+## Counting
+
+- How many *possible* edges are there in a graph with $n$ vertices? What is a big-$O$ expression describing how this number grows as $n$ becomes large? 
+- How many possible graphs on $n$ labeled nodes are there? 
+
+
+::: {.content-visible when-meta='solution'}
+::: {.callout-note}
+
+- There are $\binom{n}{2}$ ways to choose a pair of vertices between which to draw an edge, so that is the number of possible edges. 
+- For each of the possible $\binom{n}{2}$ edges, I have $2$ choices -- draw a node, or don't! So, applying the principle of multiplication, there are $2^{\binom{n}{2}}$ possible graphs on $n$ vertices. 
+
+
+:::
+:::
+
+
+::: {.content-hidden when-meta='solution'}
+
+
+\vspace{3cm}
+
+:::
+
+
+
+\pagebreak
+
+## Interlude
+
+A **path** from vertex $u$ to vertex $v$ is a sequence of edges $(u, w_1), (w_1, w_2),\ldots,(w_n,v)$ that begins with $u$ and ends with $v$, such that no intermediate vertices $w_i$ are revisited and such that the second vertex in edge each is the first vertex of the next edge. 
+
+A **cycle** is a path from vertex $u$ to itself. 
+
+A **tree** is a graph in which between every pair of nodes there is exactly one path. 
+
+\pagebreak
+
+## Problem 2
+
+Prove the following theorem: 
+
+**Theorem**: A tree contains no cycles. 
+
+::: {.content-visible when-meta='solution'}
+::: {.callout-note}
+
+We'll use proof by contradiction. Suppose that my graph contained a cycle. Then, it must have a sequence of edges of the form $(u, w_1), (w_1, w_2),\ldots,(w_n,u)$. Let's pick a single vertex on this cycle, such as $w_1$. Let's show that we can find two paths from $u$ to $w_1$. First of all, there's a path with just a single edge: $(u,w_1)$. But there's also another path: $(u, w_n), (w_n,w_{n-1}),\ldots, (w_2, w_1)$. This is a contradiction, since a tree contains exactly one path between each pair of vertices. We conclude that our graph could not have contained any cycles. 
+
+:::
+:::
+
+
+::: {.content-hidden when-meta='solution'}
+
+
+\vspace{3cm}
+
+:::
+
+
+
+
+

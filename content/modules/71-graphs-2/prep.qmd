@@ -1,0 +1,26 @@
+---
+title: "More Graph Theory"  
+---
+
+
+# Videos (~10 mins)
+
+Please review:   
+
+- [Euler Paths and the 7 Bridges of Konigsberg](https://youtu.be/dSK5jTEe-AM?si=99joQ1L1scLyXGqL) (6:23) 
+
+# Reading (~30 mins)
+ 
+Please review: 
+
+- [DMOI 4.1](https://discrete.openmathbooks.org/dmoi3/sec_gt-intro.html) 
+
+# Warmup 
+
+## Problem 1
+
+{{< include ../../../content/problems/graphs/trees.qmd >}}
+
+## Problem 2
+
+{{< include ../../../content/problems/graphs/euler-paths.qmd >}}

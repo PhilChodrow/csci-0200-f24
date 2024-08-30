@@ -1,0 +1,29 @@
+---
+title: "Conditional Probability and Bayes' Theorem" 
+---
+
+# Videos (~40 mins)
+
+
+- [Conditional Probability With Tables | Chance of an Orange M&M???](https://youtu.be/nz-ADHZrYxk?si=OMjDiQ3ekXlYz6Lu) (9:37)
+- [Bayes' Theorem - The Simplest Case](https://youtu.be/XQoLVl31ZfQ?si=-j4ztKuIINNdoVLO) (5:31)
+- [Bayes' Theorem Example: Surprising False Positives](https://youtu.be/HaYbxQC61pw?si=ee6eGim9o9BqiXrM) (12:36)
+- [Bayes' Theorem - Example: A disjoint union](https://youtu.be/k6Dw0on6NtM?si=M6FJDKtXohW0_6mC) (8:32)
+
+## Optional
+
+- [Bayes theorem, the geometry of changing beliefs](https://youtu.be/HZGCoVF3YvM?si=0mXT2mZ12eNN1Dy_) by 3blue1brown (15:10)
+
+# Reading (~30 mins)
+
+- [Discrete Mathematics and Its Applications](https://middlebury.instructure.com/courses/13162/files?preview=2518166) Section 7.3, pages 468-475
+
+# Warmup (~40 mins)
+
+## Problem 1
+
+{{< include ../../problems/probability/bayes-2.qmd >}} 
+
+## Problem 2 
+
+{{< include ../../problems/probability/bayes-1.qmd >}}

@@ -1,0 +1,400 @@
+- date: 2023-09-11
+  header: Welcome!
+  summary: |
+      We discuss the structure of the course and the role of mathematics in modern computation.
+  objectives:
+      - Getting Oriented
+  prep:
+  activities:
+      - <a href="content/modules/00-intro/in-class.qmd">Welcome!</a>
+  notes:
+  publish: true
+  due: Join EdStem and Gradescope.
+- date: 2023-09-13
+  header: Mathematics and Me
+  summary: |
+      We discuss our relationship to math and how we've learned what we've learned.
+  objectives:
+      - Getting Oriented
+  prep: <a href="content/modules/01-math-and-me/prep.qmd">Math Autobiography</a>
+  activities:
+      - <a href="content/modules/01-math-and-me/in-class.qmd">Mathematics and Me</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-09-15
+  header: |
+      Lab 1: Technical Writing and Truth Tables
+  summary: |
+      We review truth tables for describing logical operations and begin our first lab assignment in Google Colab.
+  objectives:
+      - Getting Oriented
+  prep: <a href="content/modules/10-logic-1/prep.qmd">Statements and Truth Tables</a>
+  activities:
+      - |
+        <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/01-intro-and-truth-tables.ipynb">Lab 1: Technical Writing and Truth Tables</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-09-18
+  header: Working with Symbolic Logic
+  summary: |
+      We introduce formal manipulations of logical expressions and work with the many ways to manipulate conditional statements.
+  objectives:
+      - Sets and Logic
+  prep: <a href="content/modules/11-logic-2/prep.qmd">Conditionals and Friends</a>
+  activities:
+      - <a href="content/modules/11-logic-2/in-class.qmd">Conditionals and Friends</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-09-20
+  header: Sets and Set Operations
+  summary: |
+      We introduce sets, set-builder notation, and operations for combining and measuring sets. 
+  objectives:
+      - Sets and Logic
+  prep: <a href="content/modules/12-sets/prep.qmd">Sets</a>
+  activities:
+      - <a href="content/modules/12-sets/in-class.qmd">Sets</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-09-22
+  header: "Lab 2: Inclusion-Exclusion"
+  summary: |
+      We use the inclusion-exclusion formula and its generalizations to compute the cardinality of unions of sets. Along the way, we practice writing mathematical computations and performing computational experiments. 
+  objectives:
+      - Sets and Logic
+  prep: <a href="content/modules/15-sets-2/prep.qmd">More on Sets</a>
+  activities: 
+      - |
+        <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/02-inclusion-exclusion.ipynb">Lab 2: Inclusion-Exclusion</a>
+  notes:
+  publish: true
+  due: "Lab 1: Technical Writing and Truth Tables"
+- date: 2023-09-25
+  header: "Quantifiers and Predicate Logic"
+  summary: |
+      We discuss quantification of propositions over sets and how to apply logical operations to symbolic quantifiers.
+  objectives:
+      - Sets and Logic
+  prep: <a href="content/modules/17-quantified-logic/prep.qmd">Quantifiers and Predicate Logic</a>
+  activities:
+      - |
+        <a href="content/modules/17-quantified-logic/in-class.qmd">Quantifiers and Predicate Logic</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-09-27
+  header: "Further Topics: Logic and Sets"
+  summary: |
+      We introduce logical deduction and review topics from the course so far. 
+  objectives:
+      - Sets and Logic
+      - Proof
+  prep: <a href="content/modules/19-more-logic/prep.qmd">More on Quantifiers and Logic</a>
+  activities:
+      - TBD
+  notes:
+  publish: true
+  due:
+- date: 2023-09-29
+  header: "Quiz 1"
+  summary: |
+      The first of four quizzes in which students have an opportunity to complete <a href="pages/learning-targets.qmd">Learning Targets</a>. This quiz includes targets <b>LS1</b>, <b>LS2</b>, and <b>LS3</b>. 
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due: "Lab 2: Inclusion-Exclusion"
+- date: 2023-10-2
+  header: "Direct Proofs"
+  summary: We introduce direct proofs, our first general technique for proving statements about mathematics and algorithms.
+  objectives: 
+    - Proof techniques
+  prep: <a href="content/modules/20-direct-proofs/prep.qmd">Direct Proofs</a>
+  activities: 
+    - TBD
+  notes:
+  publish: true
+  due:
+- date: 2023-10-04
+  header: "Cases, Contradictions, and Counterexamples"
+  summary: We introduce several additional proof techniques, as well as the practice of counterexamples for disproving incorrect implications. 
+  objectives: 
+    - Proof techniques
+  prep: <a href="content/modules/21-indirect-proofs/prep.qmd">Cases, Contradictions, and Counterexamples</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-06
+  header: "Lab 3: Proof Practice"
+  summary: We practice proving mathematical statements using a variety of techniques.
+  objectives:
+    - Proof techniques
+  prep:
+    - <a href="content/modules/22-proof-practice/prep.qmd">Proof Style</a> 
+  activities:
+    - |
+      <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/03-proof-practice.ipynb">Lab 3: Proof Practice</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-10-09
+  header: "Induction"
+  summary: We introduce mathematical induction, a powerful proof technique for demonstrating that a claim is true for infinitely many cases. 
+  objectives: 
+    - Proof techniques
+  prep: <a href="content/modules/23-induction/prep.qmd">Introduction to Induction</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-11
+  header: "More Induction"
+  summary: We broaden our usage of induction to use strong induction and to write inductive proofs for the correctness of functions. 
+  objectives: 
+    - Proof techniques
+  prep: <a href="content/modules/24-more-induction/prep.qmd">More Induction</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-13
+  header: "No Class: Midterm Recess"
+  summary:
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due: "Lab 3: Proof Practice"
+- date: 2023-10-16
+  header: "Relations"
+  summary: We introduce relations, with a special focus on equivalence relations on sets.  
+  objectives: 
+    - Relations and functions
+  prep: <a href="content/modules/30-relations/prep.qmd">Relations</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-18
+  header: "Functions"
+  summary: We introduce functions, with a focus on recursive definitions of functions. 
+  objectives:
+    - Relations and functions
+  prep: <a href="content/modules/31-functions/prep.qmd">Functions</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-20
+  header: "Quiz 2"
+  summary: The second of four quizzes in which students have an opportunity to complete <a href="pages/learning-targets.qmd">Learning Targets</a>. This quiz includes targets <b>LS1</b>, <b>LS2</b>, <b>LS3</b>, <b>PF1</b>, <b>PF2</b>, and <b>FR1</b>.
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due: "Lab 3: Proof Practice"
+- date: 2023-10-23
+  header: "Counting"
+  summary: We use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems. 
+  objectives: 
+    - Counting
+  prep: <a href="content/modules/40-counting-1/prep.qmd">Counting</a>
+  activities: 
+    - <a href="content/modules/40-counting-1/in-class.qmd">Counting Activity</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-10-25
+  header: "Permutations and Combinations"
+  summary: "We use permutations and combinations to count possibilities in situations involving rearrangement and subset-selection."
+  objectives:
+  - Counting
+  prep: <a href="content/modules/41-counting-2/prep.qmd">Permutations and Combinations</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-10-27
+  header: "Lab 4: Counting Lattice Paths"
+  summary: "We use binomial coefficients and Python programming to efficiently compute the number of paths through grids."
+  objectives:
+  - Counting
+  prep: <a href="content/modules/45-lattice-paths/prep.qmd">Counting Lattice Paths</a>
+  activities:
+  - |
+      <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/04-lattice-paths.ipynb">Lab 4: Counting Lattice Paths</a>
+  notes:
+  publish: true
+  due: 
+- date: 2023-10-30
+  header: "Recursion and Recurrence Relations"
+  summary: "We introduce recurrence relations and simple methods for solving them." 
+  objectives:
+    - Recurrence Relations
+  prep: <a href="content/modules/50-recursion-recurrence/prep.qmd">Recursion and Recurrence Relations</a>
+  activities:
+    - <a href="content/modules/50-recursion-recurrence/in-class.qmd">Tower of Hanoi</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-11-01 
+  header: "Recursion and Recurrence Relations"
+  summary: "We practice writing recurrence relations to describe quantities of interest and develop further techniques to solve them."
+  objectives:
+  prep: <a href="content/modules/51-recursion-recurrence-2/prep.qmd">More Recursion and Recurrence Relations</a>
+  activities:
+    - <a href="content/modules/51-recursion-recurrence-2/in-class.qmd">Parking Spaces</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-11-03
+  header: "Lab 5: Analyzing Gradient Descent"
+  summary: "We use recurrence relations to analyze the runtime of an algorithm for minimizing a function."
+  objectives:
+  prep: <a href="content/modules/55-numerical-algorithms/prep.qmd">Numerical Algorithms</a>
+  activities:
+  - |
+      <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/05-gradient-descent.ipynb">Lab 5: Analyzing Gradient Descent</a>
+  notes:
+  publish: true
+  due: "Lab 4: Counting Lattice Paths"
+- date: 2023-11-06
+  header: Asymptotics and Big-Oh
+  summary: "We formally define big-oh notation and prove asymptotic descriptions of various functions."
+  objectives:
+    - Asymptotics
+  prep: <a href="content/modules/60-asymptotics/prep.qmd">Asymptotics and Big-Oh Notation</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-11-08
+  header: "Analyzing Algorithms: The Tree Method"
+  summary: "We use the tree method and other methods to estimate asymptotic runtimes of common algorithms."
+  objectives:
+    - Asymptotics
+  prep: <a href="content/modules/61-complexity/prep.qmd">Analyzing Algorithms</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-11-13
+  header: "Quiz 3"
+  summary: The third of four quizzes in which students have an opportunity to complete <a href="pages/learning-targets.qmd">Learning Targets</a>. This quiz includes targets <b>LS1</b>, <b>LS2</b>, <b>LS3</b>, <b>PF1</b>, <b>PF2</b>, <b>FR1</b>, <b>C1</b>, <b>C2</b>, and <b>R1</b>.
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due: 
+- date: 2023-11-10
+  header: "Graphs"
+  summary: "We introduce graphs as models of data structures and connected systems."
+  objectives:
+    - Graph Theory
+  prep: <a href="content/modules/70-graphs-1/prep.qmd">Graphs and Graph Theory</a>
+  activities:
+  notes:
+  publish: true
+  due: "Lab 5: Gradient Descent"
+- date: 2023-11-15
+  header: "Graphs"
+  summary: "We continue our discussion of graphs with a focus on trees."
+  objectives:
+    - Graph Theory
+  prep: <a href="content/modules/71-graphs-2/prep.qmd">More Graph Theory</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-11-17
+  header: "Lab 6: Triangle-Counting"
+  summary: "We study the adjacency matrix of a graph and use it to count the number of triangles in real and synthetic graph data sets."
+  objectives:
+    - Graph Theory
+  prep: <a href="content/modules/72-graphs-3/prep.qmd">Network Science</a>
+  activities:
+  - |
+      <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/06-network-science.ipynb">Lab 6: Introduction to Network Science</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-11-27
+  header: "Introducing Discrete Probability"
+  summary: "We introduce discrete probability through a discussion of a famous problem."
+  objectives:
+    - Probability
+  prep: <a href="content/modules/80-probability-1/prep.qmd">Introducing Discrete Probability</a>
+  activities:
+  notes:
+  publish: true
+  due:
+- date: 2023-11-29
+  header: "Sample Spaces and Conditional Probability"
+  summary: "We introduce formal discrete probability theory via sample spaces. We also introduce conditional probability."
+  objectives:
+    - Probability
+  prep: <a href="content/modules/81-probability-2/prep.qmd">Sample Spaces, Conditional Probability</a>
+  activities: 
+    - <a href="content/modules/81-probability-2/in-class.qmd">Sample Spaces, Conditional Probability</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-12-01
+  header: "Lab 7: TBD"
+  summary:
+  objectives:
+    - Probability
+  prep: 
+  activities:
+  notes:
+  publish: true
+  due: "Lab 6: TBD"
+- date: 2023-12-04
+  header: "Bayes' Theorem"
+  summary: "We continue our discussion of conditional probability and introduce Bayes' Theorem."
+  objectives:
+    - Probability
+  prep: <a href="content/modules/82-probability-3/prep.qmd">Conditional Probability and Bayes' Theorem</a>
+  activities:
+    - <a href="content/modules/82-probability-3/in-class.qmd">Bayes' Rule and DNA Testing</a>
+  notes:
+  publish: true
+  due:
+- date: 2023-12-06
+  header: "Random Variables and Expectation"
+  summary: "We define random variables and compute the expected value of simple random variables."
+  objectives:
+    - Probability
+  prep: <a href="content/modules/83-probability-4/prep.qmd">Random variables and expectation</a>
+  activities:
+    - TBD
+  notes:
+  publish: true
+  due:
+- date: 2023-12-08
+  header: "Quiz 4"
+  summary:
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due: "Lab 7: TBD"
+- date: 2023-12-11
+  header: "Flex, Review"
+  summary:
+  objectives:
+  prep:
+  activities:
+  notes:
+  publish: true
+  due:

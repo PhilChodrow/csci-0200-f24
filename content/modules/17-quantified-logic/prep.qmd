@@ -1,0 +1,41 @@
+---
+title: "More On Sets"
+---
+
+# Reading (~30 mins)
+
+
+- [How To Be Right](https://middlebury.instructure.com/courses/13162/files?preview=2416513) by Dr. Eugenia Cheng
+- [DMOI](https://discrete.openmathbooks.org/dmoi3/sec_propositional.html), **"Beyond Propositions"** (it's a short section). 
+
+# Videos (~30 mins)
+
+- [Predicates and Their Truth Sets](https://youtu.be/9MPA_LUmmoo?si=tn9aGwkkztJq5TYf) (6:03)
+- [Universal and Existential Quantifiers](https://youtu.be/GJpezCUMOxA) (9:32)
+- [Negating Universal and Existential Quantifiers](https://youtu.be/q1rKFGSiZE8) (8:03)
+
+
+# Warmup (~45 mins)
+
+## Problem 1
+
+{{< include ../../../content/problems/quantified-logic/dmoi-3-16.qmd >}}
+ 
+*Note*: *this problem is the first two parts of 3.16 in [DMOI](https://discrete.openmathbooks.org/dmoi3/sec_propositional.html), and it has an online solution. I recommend that you try this problem on your own first, carefully **show all your steps**, and then check against the solution.*  
+
+## Problem 2
+
+### Note
+
+*While completing one of the parts of this problem, you'll need to use a predicate with multiple arguments. Some examples:*
+
+- $P(x, y)$: $x$ is the parent of $y$. 
+- $Q(x, y, z)$: $x$, $y$, and $z$ are in a project group. 
+- $R(x, y)$: $x$ is the number the results from multiplying $y$ by 3; that is, $x = 3y$. 
+
+### Problem Statement
+
+{{< include ../../../content/problems/quantified-logic/how-to-be-right.qmd >}}
+
+
+

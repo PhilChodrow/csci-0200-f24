@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.339">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab 5: Analyzing Gradient Descent</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/icons/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Math Foundations of Computing: CSCI 0200
+      </li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Math Foundations of Computing: CSCI 0200</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Additional Pages</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../pages/llms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">More on Language Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../pages/mask-policy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Masks Are Required in CSCI 0200</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../pages/learning-targets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Targets</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../pages/acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgements</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#collaboration-statement" id="toc-collaboration-statement" class="nav-link active" data-scroll-target="#collaboration-statement">Collaboration Statement</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#background-gradient-descent" id="toc-background-gradient-descent" class="nav-link" data-scroll-target="#background-gradient-descent">Background: Gradient Descent</a>
+  <ul class="collapse">
+  <li><a href="#the-gradient-descent-algorithm-for-fx-frac12x2" id="toc-the-gradient-descent-algorithm-for-fx-frac12x2" class="nav-link" data-scroll-target="#the-gradient-descent-algorithm-for-fx-frac12x2">The Gradient Descent Algorithm For <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span></a></li>
+  <li><a href="#part-a-gradient-descent-converges-sometimes" id="toc-part-a-gradient-descent-converges-sometimes" class="nav-link" data-scroll-target="#part-a-gradient-descent-converges-sometimes">Part A: Gradient Descent Converges (Sometimes)</a>
+  <ul class="collapse">
+  <li><a href="#exercise-a.1" id="toc-exercise-a.1" class="nav-link" data-scroll-target="#exercise-a.1">Exercise A.1</a></li>
+  <li><a href="#exercise-a.2" id="toc-exercise-a.2" class="nav-link" data-scroll-target="#exercise-a.2">Exercise A.2</a></li>
+  </ul></li>
+  <li><a href="#exercise-a.3" id="toc-exercise-a.3" class="nav-link" data-scroll-target="#exercise-a.3">Exercise A.3</a></li>
+  <li><a href="#exercise-a.4" id="toc-exercise-a.4" class="nav-link" data-scroll-target="#exercise-a.4">Exercise A.4</a></li>
+  <li><a href="#exercise-a.5" id="toc-exercise-a.5" class="nav-link" data-scroll-target="#exercise-a.5">Exercise A.5</a></li>
+  <li><a href="#exercise-a.6" id="toc-exercise-a.6" class="nav-link" data-scroll-target="#exercise-a.6">Exercise A.6</a></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part B</a></li>
+  <li><a href="#part-c-required-for-e-optional-for-m" id="toc-part-c-required-for-e-optional-for-m" class="nav-link" data-scroll-target="#part-c-required-for-e-optional-for-m">Part C (Required for <strong>E</strong>, optional for <strong>M</strong>)</a>
+  <ul class="collapse">
+  <li><a href="#exercise-c.1" id="toc-exercise-c.1" class="nav-link" data-scroll-target="#exercise-c.1">Exercise C.1</a></li>
+  <li><a href="#exercise-c.2" id="toc-exercise-c.2" class="nav-link" data-scroll-target="#exercise-c.2">Exercise C.2</a></li>
+  <li><a href="#exercise-c.3" id="toc-exercise-c.3" class="nav-link" data-scroll-target="#exercise-c.3">Exercise C.3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-d-reflection" id="toc-part-d-reflection" class="nav-link" data-scroll-target="#part-d-reflection">Part D: Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 5: Analyzing Gradient Descent</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<ul>
+<li>[Your name]</li>
+<li>[The name of one of your group members]</li>
+<li>[The name of your other group member]</li>
+</ul>
+<p><strong>Learning Objectives</strong>:</p>
+<ul>
+<li>You will use recurrence relations to prove an algorithm used for training models in machine learning and artificial intelligence.</li>
+<li>You will describe the <em>rate of convergence</em> for this algorithm.</li>
+<li>You will perform simulations and interpret your results in the context of the theory you have developed.</li>
+</ul>
+<p><strong>Assessment</strong>:</p>
+<p>Labs are assessed according to <a href="https://www.philchodrow.prof/CSCI-0200/pages/lab-assessment.html">the posted EMRN rubric</a>.</p>
+<section id="collaboration-statement" class="level1">
+<h1>Collaboration Statement</h1>
+<p>[<em>Please describe the contributions of each group member. Please also describe the support you received from Course Assistants, other classmates, and any online resources such as StackExchange or ChatGPT.</em>]</p>
+</section>
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>In Part A, <strong>you should not be typing during the lab period</strong>. You can use your device to look at the lab instructions and for quick checks, but now is not the time for typing. Instead, you should work with your group at your board or on your mini-boards on the specified problems.</p>
+<ul>
+<li>Remember your group norms from Lab 1.</li>
+<li>Pass the marker often, <em>at minimum</em> twice in every Part.</li>
+<li>Every group member should take a picture before erasing anything.</li>
+</ul>
+</section>
+<section id="background-gradient-descent" class="level1">
+<h1>Background: Gradient Descent</h1>
+<p>In many contexts in data science, machine learning, artificial intelligence, and various forms of engineering, it is necessary to <em>minimize a function</em> – find it’s smallest value. If you’ve ever wondered why OpenAI needs all that money to make ChatGPT, one of the main answers is that they need to use supercomputers in order to minimize extremely complicated functions very efficiently.</p>
+<p><strong>Definition</strong>: A function <span class="math inline">\(f: \mathbb{R} \rightarrow \mathbb{R}\)</span> has a (strict) <em>minimizer</em> <span class="math inline">\(x^*\in \mathbb{R}\)</span> if, for all <span class="math inline">\(x \in \mathbb{R}\)</span> such that <span class="math inline">\(x \neq x^*\)</span>, it is the case that <span class="math inline">\(f(x^*) &lt; f(x)\)</span>. In this case, the <em>minimum value</em> of <span class="math inline">\(f\)</span> is <span class="math inline">\(f(x^*)\)</span>. The task of <em>minimizing a function</em> is the task of finding a minimum <span class="math inline">\(x^*\)</span>, if it exists.</p>
+<p>For example, the function <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span> has a strict minimizer at <span class="math inline">\(x^* = 0\)</span>, with minimum value <span class="math inline">\(0\)</span>. Here’s how that looks on a graph:</p>
+<div id="cell-3" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numerical and visualization packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># arrays to hold function values</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1001</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label <span class="op">=</span> <span class="vs">r"$f(x) = \frac</span><span class="sc">{1}{2}</span><span class="vs">x^2$"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.scatter([<span class="dv">0</span>], [<span class="dv">0</span>], color <span class="op">=</span> <span class="st">"black"</span>, label <span class="op">=</span> <span class="vs">r"($x^*, f(x^*)$)"</span>, zorder <span class="op">=</span> <span class="dv">10</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>labs <span class="op">=</span> plt.gca().<span class="bu">set</span>(xlabel <span class="op">=</span> <span class="vs">r"$x$"</span>, ylabel <span class="op">=</span> <span class="vs">r"$y = f(x) = \frac</span><span class="sc">{1}{2}</span><span class="vs">x^2$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="05-gradient-descent_files/figure-html/cell-2-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In all real-world applications, we have to deal with more complicated functions whose minimizers we don’t know exactly. To find minimizers of these functions, we use a family of algorithms based on the idea of <em>gradient descent</em>, in which we take a small step in (what is hopefully) the right direction many times over. For example, here’s a gradient descent implementation for the function <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span>. We start off with an initial guess that might be very far from the correct minimizer. Then, we take little steps in the right direction, towards the basin of the parabola. As we go, we get closer and closer to the correct minimizer at <span class="math inline">\(x = 0\)</span>. It’s easiest to start with a picture:</p>
+<div id="cell-5" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># start the plot</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label <span class="op">=</span> <span class="vs">r"$f(x) = x^2$"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># begin with an initial guess about the location of the minimizer</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>x_guess <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the guess</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.scatter([x_guess], [<span class="dv">1</span><span class="op">/</span><span class="dv">2</span><span class="op">*</span>x_guess<span class="op">**</span><span class="dv">2</span>], color <span class="op">=</span> <span class="st">"black"</span>, zorder <span class="op">=</span> <span class="dv">10</span>, s <span class="op">=</span> <span class="dv">30</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">100</span>     <span class="co"># number of iterations</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">0</span>       <span class="co"># initial timestep</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.1</span> <span class="co"># learning rate</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># this loop is where gradient descent happens</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> t <span class="op">&lt;</span> T: </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># plot current guess</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    plt.scatter([x_guess], [<span class="dv">1</span><span class="op">/</span><span class="dv">2</span><span class="op">*</span>x_guess<span class="op">**</span><span class="dv">2</span>], color <span class="op">=</span> <span class="st">"black"</span>, zorder <span class="op">=</span> <span class="dv">10</span>, s <span class="op">=</span> <span class="dv">5</span>, alpha <span class="op">=</span> <span class="fl">0.5</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># gradient descent update</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    x_guess <span class="op">=</span> x_guess <span class="op">-</span> alpha<span class="op">*</span>x_guess</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># increment the timestep</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> t<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>labs <span class="op">=</span> plt.gca().<span class="bu">set</span>(xlabel <span class="op">=</span> <span class="vs">r"$x$"</span>, ylabel <span class="op">=</span> <span class="vs">r"$y = f(x) = \frac</span><span class="sc">{1}{2}</span><span class="vs">x^2$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="05-gradient-descent_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>In this lab, we are going to formally state that the gradient descent algorithm works (successfully comes close to the minimizer) and describe how quickly this occurs. We’re going to focus our attention on the function <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span>, although we’ll consider more general quadratic functions in the last part of the lab.</p>
+<section id="the-gradient-descent-algorithm-for-fx-frac12x2" class="level2">
+<h2 class="anchored" data-anchor-id="the-gradient-descent-algorithm-for-fx-frac12x2">The Gradient Descent Algorithm For <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span></h2>
+<p>Formally, the algorithm for gradient descent for <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span> works as follows.</p>
+<p><strong>Inputs</strong>: initial guess <span class="math inline">\(x_0\)</span>, learning rate <span class="math inline">\(\alpha \in \mathbb{R}^+\)</span>, total number of timesteps <span class="math inline">\(T\)</span>.</p>
+<ol type="1">
+<li>Set <span class="math inline">\(t \gets 0\)</span>.</li>
+<li>While <span class="math inline">\(t &lt; T\)</span>:
+<ul>
+<li>Set <span class="math inline">\(x_t \gets x_{t-1} - \alpha x_{t-1}\)</span>.</li>
+<li><span class="math inline">\(t \gets t+1\)</span>.</li>
+</ul></li>
+</ol>
+<p>This is the algorithm implemented in the Python code block above.</p>
+</section>
+<section id="part-a-gradient-descent-converges-sometimes" class="level2">
+<h2 class="anchored" data-anchor-id="part-a-gradient-descent-converges-sometimes">Part A: Gradient Descent Converges (Sometimes)</h2>
+<p>Let <span class="math inline">\(\delta_t = |x_t - 0| = |x_t|\)</span> be the <em>error</em> in our current estimate. You can think of <span class="math inline">\(\delta_t\)</span> as the distance between the correct answer (which is <span class="math inline">\(x^* = 0\)</span>) and our current guess <span class="math inline">\(x_t\)</span>. We’d like to make the error <span class="math inline">\(\delta_t\)</span> close to 0, and we’d like to do so as quickly as possible.</p>
+<section id="exercise-a.1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-a.1">Exercise A.1</h3>
+<p>At the board with your group, write a careful calculation which proves the recursion relation</p>
+<p><span class="math display">\[
+\delta_t = |1 - \alpha | \delta_{t-1}\;.
+\]</span></p>
+<p>for the error <span class="math inline">\(\delta_t\)</span> when using the gradient descent algorithm outlined above. Then, after lab, type your calculation and place it below.</p>
+<p><strong>Hints</strong>:</p>
+<ul>
+<li><span class="math inline">\(|a|\)</span> is the absolute value of <span class="math inline">\(a\)</span>.</li>
+<li>For any <span class="math inline">\(a, b \in \mathbb{R}\)</span>, <span class="math inline">\(|ab| = |a||b|\)</span>.</li>
+</ul>
+<p>[<em>Type a careful version of your calculation below.</em>]</p>
+</section>
+<section id="exercise-a.2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-a.2">Exercise A.2</h3>
+<p>At the board, write a proof by induction on the timestep <span class="math inline">\(t\)</span> that the following formula solves the recurrence relation from A.1:</p>
+<p><span class="math display">\[
+\delta_t = |1-\alpha|^{t} \delta_0\;.
+\]</span></p>
+<p>Then, after lab, type your proof and place it below. Please remember to include both a base case and an inductive step. Use Exercise A.1!</p>
+<p>[<em>Type a careful proof by induction based on your work.</em>]</p>
+<p>The number <span class="math inline">\(\alpha\)</span> is often called the <em>learning rate</em>. It’s nice for the learning rate to be large, because this often allows us to get good approximations quickly. However, we can’t choose this number to be too large…</p>
+</section>
+</section>
+<section id="exercise-a.3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-a.3">Exercise A.3</h2>
+<p>There exist numbers <span class="math inline">\(\alpha_*\)</span> and <span class="math inline">\(\alpha^*\)</span> with the property that <span class="math inline">\(\delta_t &lt; \delta_{t-1}\)</span> if and only if <span class="math inline">\(\alpha_* &lt; \alpha &lt; \alpha^*\)</span>. Determine the values of <span class="math inline">\(\alpha_*\)</span> and <span class="math inline">\(\alpha^*\)</span> and explain. You’ll need to use the recursion relation in A.1.</p>
+<p>[<em>Your solution here</em>]</p>
+</section>
+<section id="exercise-a.4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-a.4">Exercise A.4</h2>
+<p>Suppose that we do <span class="math inline">\(1,000\)</span> steps of gradient descent, so that <span class="math inline">\(T = 1,000\)</span>. Consider the following three possibilities:</p>
+<ol type="1">
+<li><span class="math inline">\(\delta_T\)</span> becomes very close to 0.</li>
+<li><span class="math inline">\(\delta_T\)</span> stays at its original value <span class="math inline">\(\delta_0\)</span>.</li>
+<li><span class="math inline">\(\delta_T\)</span> becomes very large.</li>
+</ol>
+<p>Describe which of these possibilities will occur in the following scenarios:</p>
+<ul>
+<li>Scenario I: <span class="math inline">\(\alpha = 0\)</span>.</li>
+<li>Scenario II: <span class="math inline">\(\alpha = 3\)</span>.</li>
+<li>Scenario III: <span class="math inline">\(\alpha = 1/2\)</span>.</li>
+</ul>
+<p>[<em>Your response here</em>]</p>
+</section>
+<section id="exercise-a.5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-a.5">Exercise A.5</h2>
+<p>Fill in the blanks and write a proof of the following theorem.</p>
+<p><strong>Theorem</strong>: If we do many steps of gradient descent for the function <span class="math inline">\(f(x) = \frac{1}{2}x^2\)</span> with learning rate <span class="math inline">\(\alpha\)</span>, the error <span class="math inline">\(\delta_t\)</span> will converge (become very close) to 0 if and only if <span class="math inline">\(\_\_\_ &lt; \alpha &lt; \_\_\_\)</span>.</p>
+<p><strong>Hint</strong>: <em>To prove the theorem, you should just cite your answers to the previous parts. You don’t actually have to do very much new mathematics in this exercise; you just have to connect your results together in a full proof.</em></p>
+<p>[<em>Your proof here</em>.]</p>
+</section>
+<section id="exercise-a.6" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-a.6">Exercise A.6</h2>
+<p>Suppose that I start with an initial guess <span class="math inline">\(x_0\)</span>. I would like to run my gradient descent algorithm long enough that, in my final timestep <span class="math inline">\(t\)</span>, <span class="math inline">\(\delta_T &lt; \epsilon\)</span> for some small number <span class="math inline">\(\epsilon &gt; 0\)</span>. <span class="math inline">\(\epsilon\)</span> is often called the <em>tolerance</em>. Using your response from Exercise A.2, solve for <span class="math inline">\(T\)</span> in terms of the tolerance <span class="math inline">\(\epsilon\)</span>. <strong>Please show your work!</strong> The result should be a formula for the necessary number of timesteps <span class="math inline">\(T\)</span> in terms of <span class="math inline">\(\epsilon\)</span>.</p>
+<p><strong>Hint</strong>: You will need to use logs to solve for <span class="math inline">\(T\)</span>.</p>
+<p>[<em>Your calculation for the required number of steps <span class="math inline">\(T\)</span> to achieve a given tolerance</em>]</p>
+<p><strong>SOLUTION</strong>:</p>
+</section>
+<section id="part-b" class="level2">
+<h2 class="anchored" data-anchor-id="part-b">Part B</h2>
+<p>Below, I’ve started a computational experiment in which I’ve run the gradient descent algorithm for two separate values of <span class="math inline">\(\alpha\)</span>. On the horizontal axis I’ve plotted the iteration number, and on the vertical axis I’ve plotted the error <span class="math inline">\(\delta_t\)</span> on log-scaled axes.</p>
+<p>For the value of <span class="math inline">\(\alpha\)</span> I chose, the error decreases on the log-scaled axes.</p>
+<p>Guided by your results in the previous parts, add two values of <span class="math inline">\(\alpha\)</span> to the <code>alpha_vals</code> list such that:</p>
+<ul>
+<li>In one case, the error <em>increases</em>. Bad!</li>
+<li>In another case, the error is constant and never changes. Whoops!</li>
+</ul>
+<p>All you need to do is add two values to the <code>alpha_vals</code> list and then run the code cell.</p>
+<div id="cell-21" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># you only need to edit this list!</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># SOLUTION (lots of valid values)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>alpha_vals <span class="op">=</span> [<span class="fl">.1</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">## -------</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">## no need to touch anything below</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">## -------</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">"orange"</span>, <span class="st">"blue"</span>, <span class="st">"black"</span>, <span class="st">"grey"</span>]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(alpha_vals)): <span class="co"># for each value of alpha</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do a complete algorithm run</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    x_guess <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> alpha_vals[i]</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> colors[i]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    T <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># plot the results</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    plt.scatter([t], [x_guess], zorder <span class="op">=</span> <span class="dv">10</span>, s <span class="op">=</span> <span class="dv">5</span>, color <span class="op">=</span> color, label <span class="op">=</span> <span class="vs">r"$\alpha = $"</span> <span class="op">+</span> <span class="bu">str</span>(alpha))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> t <span class="op">&lt;</span> T: </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        plt.scatter([t], [x_guess], zorder <span class="op">=</span> <span class="dv">10</span>, s <span class="op">=</span> <span class="dv">5</span>, color <span class="op">=</span> color)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        x_guess <span class="op">=</span> x_guess <span class="op">-</span> alpha<span class="op">*</span>x_guess</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> t<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># label the plot</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>plt.semilogy()</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>labs <span class="op">=</span> plt.gca().<span class="bu">set</span>(xlabel <span class="op">=</span> <span class="st">"Iteration $t$"</span>, ylabel <span class="op">=</span> <span class="vs">r"Error $\delta_t$ (log-scale)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="05-gradient-descent_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="part-c-required-for-e-optional-for-m" class="level2">
+<h2 class="anchored" data-anchor-id="part-c-required-for-e-optional-for-m">Part C (Required for <strong>E</strong>, optional for <strong>M</strong>)</h2>
+<p><em>If you are happy with an <strong>M</strong> on this assignment, you can skip all of Part C and move on to Part D. You should solve this part only if you want an E.</em></p>
+<p>Consider now the general quadratic function <span class="math inline">\(f(x) = \frac{1}{2} ax^2 + bx + c\)</span> for some <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b, c \in \mathbb{R}\)</span>. This function has its minimum at the point <span class="math inline">\(x_* = -\frac{b}{a}\)</span>. For this function, the gradient descent algorithm is just a little bit different:</p>
+<p><strong>Inputs</strong>: initial guess <span class="math inline">\(x_0\)</span>, learning rate <span class="math inline">\(\alpha \in \mathbb{R}^+\)</span>, total number of timesteps <span class="math inline">\(T\)</span>.</p>
+<ol type="1">
+<li>Set <span class="math inline">\(t \gets 0\)</span>.</li>
+<li>While <span class="math inline">\(t &lt; T\)</span>:
+<ul>
+<li>Set <span class="math inline">\(x_t \gets x_{t-1} - \alpha (ax_{t-1} + b)\)</span>.</li>
+<li><span class="math inline">\(t \gets t+1\)</span>.</li>
+</ul></li>
+</ol>
+<p>In this section, you’ll repeat the exercises in Part A for this more general function. The results will be similar but a little more complicated.</p>
+<section id="exercise-c.1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-c.1">Exercise C.1</h3>
+<p>Define <span class="math inline">\(\delta_t = |x_t - x_*|\)</span>. Prove the recursion relation</p>
+<p><span class="math display">\[
+\delta_t = |1 - \alpha a | \delta_{t-1}\;.
+\]</span></p>
+<p><em>Hint</em>: the algebra here is messier but it’s nothing more than grouping, rearranging fractions, and factoring.</p>
+<p>[<em>Your proof here</em>]</p>
+</section>
+<section id="exercise-c.2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-c.2">Exercise C.2</h3>
+<p>There exist numbers <span class="math inline">\(\alpha_*\)</span> and <span class="math inline">\(\alpha^*\)</span> such that we are guaranteed that <span class="math inline">\(\delta_t \rightarrow 0\)</span> if any only if <span class="math inline">\(\alpha_* &lt; \alpha &lt; \alpha^*\)</span>. What are <span class="math inline">\(\alpha_*\)</span> and <span class="math inline">\(\alpha^*\)</span> in terms of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>? Justify your response.</p>
+<p>[<em>your response here</em>]</p>
+</section>
+<section id="exercise-c.3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-c.3">Exercise C.3</h3>
+<p>Suppose that indeed <span class="math inline">\(\alpha_* &lt; \alpha &lt; \alpha^*\)</span>. Suppose that we start with initial guess <span class="math inline">\(x_0\)</span>. Suppose that we wish to run our algorithm for a number of timesteps <span class="math inline">\(T\)</span> so that the error <span class="math inline">\(\delta_T\)</span> is guaranteed to be less than <span class="math inline">\(\epsilon\)</span>. Solve for <span class="math inline">\(T\)</span> in terms of <span class="math inline">\(\epsilon\)</span>, <span class="math inline">\(x_0\)</span>, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> to find the required number of steps. <strong>Please show your work!</strong></p>
+<p>[<em>Your calculation here</em>]</p>
+</section>
+</section>
+</section>
+<section id="part-d-reflection" class="level1">
+<h1>Part D: Reflection</h1>
+<p>Write a paragraph in response to the following prompt:</p>
+<ol type="1">
+<li>Approximately how long did it take you to complete this lab, <strong>including Friday’s in-class lab time</strong>?</li>
+<li>Big picture, how would you describe what this lab was about?</li>
+<li>What are three skills you learned or practiced in this lab?</li>
+<li>What is a way in which your group supported your learning during this lab?</li>
+<li>What’s something you found interesting, stimulating, or fun about this lab?</li>
+<li>What’s something you found challenging, disappointing, or frustrating about this lab?</li>
+</ol>
+<p>[<em>Your reflection here</em>]</p>
+
+
+</section>
+
+<p><br> <br> <span style="color:grey;">© Phil Chodrow, 2023</span></p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

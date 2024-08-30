@@ -1,0 +1,45 @@
+---
+title: "Preparation: Logical Statements and Truth Tables"
+---
+
+*Starting today, we are going to start introducing new course content through videos, readings, and warmup problems. Today's prep is shorter than usual and should take a little more than an hour.*
+
+# Videos (~20 mins)
+
+- [Logical Statements](https://youtu.be/q2eyZZK-OIk?si=yLKi7F2d2FkiBri1) (6:18)
+- [Intro to Truth Tables: Negation, Conjunction, Disjunction](https://youtu.be/7mulE-zramc?si=yV8nyb9R39d9kZd6) (5:52)
+- [Truth Table Example](https://youtu.be/LNSfM86I8is?si=Rn0iLj-X4Q_ZKyy4) (3:23)
+- [Logical Equivalence of Two Statements](https://youtu.be/U2zPxuj8mnI?si=fSwTIkorMXCDscHk) (3:42)
+
+# Reading (~20 mins)
+
+- [DMOI Chapter 0.2](https://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html) from the beginning through Example 0.2.3
+- [DMOI Chapter 3.1](https://discrete.openmathbooks.org/dmoi3/sec_propositional.html), from the beginning up through Example 3.1.3.
+
+## Optional Reading: 
+
+*This reading covers the same material but has more examples from theoretical mathematics*.
+
+- [BOP 2.1-2.2](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf#page=46)
+
+
+# Warmup Problems (~30 mins) 
+
+*Please complete these problems "by hand," without typing. Pencil/pen and paper is best practice for the quiz, but using a stylus with a tablet is also fine. Then, scan/photograph or otherwise produce an image of your solutions and upload them to Canvas.*
+
+### Problem 1
+ 
+{{< include ../../../content/problems/logic/truth-tables-1.qmd >}}
+ 
+### Problem 2
+
+{{< include ../../../content/problems/logic/python-to-logic-1.qmd >}}
+
+*Optionally*, you might be interested to check the final column of your truth table in Python. Here's some code you can run in Thonny or any other Python environment. You'll need to also include the definition of the function `f` above. 
+  
+```python
+import itertools
+tf = [True, False]
+for p, q, r in itertools.product(tf, tf, tf): 
+    print(p, q, r, f(p, q, r))
+```

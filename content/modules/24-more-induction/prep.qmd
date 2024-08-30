@@ -1,0 +1,23 @@
+---
+title: "More Induction"
+---
+
+
+## Videos (~20 minutes)
+
+- [Induction Proofs Involving Inequalities](https://youtu.be/L5iCGi3dW-Y?si=XP6jtfQwr6RyDGYU) (6:34)
+- [Strong Induction](https://youtu.be/rfA0h9udl7E?si=UuQAuxqH5sn4QjOH) (10:08)
+
+## Reading (~30 minutes)
+
+- [DMOI Chapter 2](https://discrete.openmathbooks.org/dmoi3/sec_seq-induction.html). The new stuff is in "Strong Induction" until end, but you will benefit from reviewing the entire chapter. 
+ 
+## Warmup (~50 minutes)
+
+### Problem 1
+
+{{< include ../../../content/problems/induction/nim.qmd >}}
+ 
+### Problem 2   
+
+{{< include ../../../content/problems/induction/proving-a-function.qmd >}}

@@ -1,0 +1,9 @@
+# In Class: Combinatorial Arguments and Recurrence Relations
+
+## Learning Objectives
+
+- You will use combinatorial reasoning to derive linear recurrence relations. 
+- You will use combinatorial proof to demonstrate identities between numbers with combinatorial interpretations. 
+
+
+{{< include ../../../content/problems/recursion-recurrence/fibonacci-combinatorics.qmd >}}

@@ -1,0 +1,39 @@
+---
+title: "More On Sets"
+---
+
+
+
+# Videos (0 mins)
+
+No videos today!
+
+# Reading (~15 mins)
+
+For the warmup, it's enough to review last time's reading, with special focus on the topic of *set cardinality*.
+
+- [DMOI 0.3](https://discrete.openmathbooks.org/dmoi3/sec_intro-sets.html) 
+
+ 
+# Warmup Problems (~40 mins) 
+
+*Please complete these problems "by hand," without typing. Pencil/pen and paper is best practice for the quiz, but using a stylus with a tablet is also fine. Then, scan/photograph or otherwise produce an image of your solutions and upload them to Canvas.*
+
+## Problem 1
+
+{{< include ../../../content/problems/sets/element-method-2.qmd >}}
+
+**Hint**: Recall that your proof should begin with the phrase "Let $x\in A$" and end with a phrase similar to "Therefore, $x \in B$." 
+
+**Hint**: You may find it helpful to recall the following property of logarithms. For any $a > 0$ and $b \in \mathbb{R}$, $\log_2a^b = b\log_2a$.  
+
+
+## Problem 2 
+
+(*DMOI 0.3.24*)
+
+{{< include ../../../content/problems/sets/dmoi-0-3-24.qmd >}}
+
+## Problem 3
+
+{{< include ../../../content/problems/sets/cards-1.qmd >}}   

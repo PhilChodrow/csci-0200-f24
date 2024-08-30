@@ -1,0 +1,27 @@
+---
+title: "Relations"
+---
+
+# Videos (~30 minutes)
+
+- [Relations Between Two Sets: Definition + First Examples](https://youtu.be/0dzNlrNJYdc?si=4We8ms654JV8yC_D) (6:39)
+- [Relations and their Inverses](https://youtu.be/cQiyDUiIcOQ?si=yAFo0xIjz-bD6ioL) (2:49)
+- [Reflexive, Symmetric, and Transitive Relations on a Set](https://youtu.be/q0xN_N7l_Kw?si=3EbR3JIi1SVAZ17b) (6:54)
+- [Equivalence Relations: Reflexive, Symmetric, and Transitive](https://youtu.be/T6RUxvJR8i4?si=Ekvy5i3tiuTPBOX2) (4:36)
+- [You need to check EVERY spot for reflexivity, symmetry, and transitivity](https://youtu.be/TctNssYMXJE?si=XHzu5oG8-wbKdepw) (3:40)
+
+# Reading (~40 minutes) 
+
+- [Book of Proof, 11.2-11.4](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf#page=217)
+
+# Warmup (~40 minutes)
+
+## Problem 1 
+
+{{< include ../../../content/problems/relations/mod.qmd >}}
+
+## Problem 2
+
+{{< include ../../../content/problems/relations/bop-11-3-3.qmd >}}
+
+ 

@@ -1,0 +1,21 @@
+## Videos (0 minutes)
+
+No videos for today! 
+
+## Reading (30 minutes)  
+
+*Please review, with a special focus on the interpretation of binomial coefficients as counting lattice paths.* 
+
+- [DMOI 1.2: Binomial Coefficients](https://discrete.openmathbooks.org/dmoi3/sec_counting-binom.html)
+
+## Warmup (50 minutes)
+
+### Problem 1
+
+{{< include ../../../content/problems/counting/grid-1.qmd >}}
+
+### Problem 2
+
+{{< include ../../../content/problems/counting/boulder.qmd >}}
+  
+

@@ -1,0 +1,36 @@
+---
+title: "Practice with Proofs"
+---
+
+## Videos (0 minutes)
+
+*No videos for today*. 
+
+## Reading (~45 minutes)
+
+- [Book of Proof, Chapter 5](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf#page=140).
+
+Focus on: 
+
+- Reviewing the idea of contrapositive proof. 
+- Congruence of integers ($a \equiv b \mod{n}$). 
+- Proof style.
+
+
+
+## Warmup (~40 minutes)
+
+### Problem 1
+
+{{< include ../../../content/problems/proofs/style-1.qmd >}}
+     
+
+
+
+
+
+
+
+
+
+

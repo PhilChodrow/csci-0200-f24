@@ -1,0 +1,13 @@
+---
+title: Acknowledgements
+---
+
+The assessment system for this course is closely modeled on [Peter-Michael Osera](https://osera.cs.grinnell.edu/)'s offering of [CSC 208-01: Discrete Mathematics](https://osera.cs.grinnell.edu/csc208/) at Grinnell College.
+
+Many of the videos used in this course were created by [Dr. Trefor Bazett](https://onlineacademiccommunity.uvic.ca/treforbazett/) at the University of Victoria. Dr. Bazett [kindly posted](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS) these videos on YouTube for public use. 
+
+I learned of many of the videos and readings used in this course from [ Chad Topaz](https://chadtopaz.com/)'s offering of [MATH-200: Discrete Mathematics](https://glow.williams.edu/courses/3011771) at Williams College.
+
+My approach to Bloom's taxonomy and assignments/class time is inspired by [this blog post](https://rtalbert.org/re-thinking-blooms-taxonomy-for-flipped-learning-design/) by Robert Talbert. 
+
+Many learning targets are adapted from Robert Talbert's targets from [an offering](https://hackmd.io/@rtalbert235/BkwQboPzY) of MTH 225: Discrete Mathematics at Grand Valley State University.  
