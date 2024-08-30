@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.339">
+<meta name="generator" content="quarto-1.5.53">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,12 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -98,8 +100,35 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -110,13 +139,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Schedule</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -125,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Math Foundations of Computing: CSCI 0200</a> 
@@ -150,11 +179,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/learning-targets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Targets</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Additional Pages</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -171,12 +206,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Masks Are Required in CSCI 0200</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/learning-targets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning Targets</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -188,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -212,12 +241,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+
 <p><em>This schedule is tentative and subject to change</em>.</p>
 <p>Warmups are due <strong>every class day</strong>, even if they are not listed under the “Due” column.</p>
 <div id="listing-schedule" class="quarto-listing quarto-listing-container-custom">
+
+    
+    
+    
+    
+    
+    
+        
+        
+        
             <h2 class="anchored"> Week 1 </h2>
             
-<table data-quarto-postprocess="true" class="table">
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -247,7 +287,7 @@ Getting Oriented<br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/00-intro/in-class.html">Welcome!</a><br>
+<a href="content/modules/00-intro/in-class.qmd">Welcome!</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Due</strong><br>
 Join EdStem and Gradescope.</td>
@@ -272,9 +312,9 @@ Join EdStem and Gradescope.</td>
 Getting Oriented<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/01-math-and-me/prep.html">Math Autobiography</a></td>
+<a href="content/modules/01-math-and-me/prep.qmd">Math Autobiography</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/01-math-and-me/in-class.html">Mathematics and Me</a><br>
+<a href="content/modules/01-math-and-me/in-class.qmd">Mathematics and Me</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -298,7 +338,7 @@ Getting Oriented<br>
 Getting Oriented<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/10-logic-1/prep.html">Statements and Truth Tables</a></td>
+<a href="content/modules/10-logic-1/prep.qmd">Statements and Truth Tables</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/01-intro-and-truth-tables.ipynb">Lab 1: Technical Writing and Truth Tables</a><br>
 </td>
@@ -309,9 +349,12 @@ Getting Oriented<br>
 </tr>
 </tbody>
 </table>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 2 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -340,9 +383,9 @@ Getting Oriented<br>
 Sets and Logic<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/11-logic-2/prep.html">Conditionals and Friends</a></td>
+<a href="content/modules/11-logic-2/prep.qmd">Conditionals and Friends</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/11-logic-2/in-class.html">Conditionals and Friends</a><br>
+<a href="content/modules/11-logic-2/in-class.qmd">Conditionals and Friends</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -366,9 +409,9 @@ Sets and Logic<br>
 Sets and Logic<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/12-sets/prep.html">Sets</a></td>
+<a href="content/modules/12-sets/prep.qmd">Sets</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/12-sets/in-class.html">Sets</a><br>
+<a href="content/modules/12-sets/in-class.qmd">Sets</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -392,7 +435,7 @@ Sets and Logic<br>
 Sets and Logic<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/15-sets-2/prep.html">More on Sets</a></td>
+<a href="content/modules/15-sets-2/prep.qmd">More on Sets</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/02-inclusion-exclusion.ipynb">Lab 2: Inclusion-Exclusion</a><br>
 </td>
@@ -404,10 +447,12 @@ Lab 1: Technical Writing and Truth Tables</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 3 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -436,9 +481,9 @@ Lab 1: Technical Writing and Truth Tables</td>
 Sets and Logic<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/17-quantified-logic/prep.html">Quantifiers and Predicate Logic</a></td>
+<a href="content/modules/17-quantified-logic/prep.qmd">Quantifiers and Predicate Logic</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/17-quantified-logic/in-class.html">Quantifiers and Predicate Logic</a><br>
+<a href="content/modules/17-quantified-logic/in-class.qmd">Quantifiers and Predicate Logic</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -463,7 +508,7 @@ Sets and Logic<br>
 Proof<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/19-more-logic/prep.html">More on Quantifiers and Logic</a></td>
+<a href="content/modules/19-more-logic/prep.qmd">More on Quantifiers and Logic</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 TBD<br>
 </td>
@@ -496,10 +541,12 @@ Lab 2: Inclusion-Exclusion</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-4" class="level2">
-<h2 class="anchored" data-anchor-id="week-4">Week 4</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 4 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -528,7 +575,7 @@ Lab 2: Inclusion-Exclusion</td>
 Proof techniques<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/20-direct-proofs/prep.html">Direct Proofs</a></td>
+<a href="content/modules/20-direct-proofs/prep.qmd">Direct Proofs</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 TBD<br>
 </td>
@@ -554,7 +601,7 @@ TBD<br>
 Proof techniques<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/21-indirect-proofs/prep.html">Cases, Contradictions, and Counterexamples</a></td>
+<a href="content/modules/21-indirect-proofs/prep.qmd">Cases, Contradictions, and Counterexamples</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -578,7 +625,7 @@ Proof techniques<br>
 Proof techniques<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/22-proof-practice/prep.html">Proof Style</a></td>
+<a href="content/modules/22-proof-practice/prep.qmd">Proof Style</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/03-proof-practice.ipynb">Lab 3: Proof Practice</a><br>
 </td>
@@ -589,10 +636,12 @@ Proof techniques<br>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-5" class="level2">
-<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 5 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -621,7 +670,7 @@ Proof techniques<br>
 Proof techniques<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/23-induction/prep.html">Introduction to Induction</a></td>
+<a href="content/modules/23-induction/prep.qmd">Introduction to Induction</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -645,7 +694,7 @@ Proof techniques<br>
 Proof techniques<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/24-more-induction/prep.html">More Induction</a></td>
+<a href="content/modules/24-more-induction/prep.qmd">More Induction</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -676,10 +725,12 @@ Lab 3: Proof Practice</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-6" class="level2">
-<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 6 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -708,7 +759,7 @@ Lab 3: Proof Practice</td>
 Relations and functions<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/30-relations/prep.html">Relations</a></td>
+<a href="content/modules/30-relations/prep.qmd">Relations</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -732,7 +783,7 @@ Relations and functions<br>
 Relations and functions<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/31-functions/prep.html">Functions</a></td>
+<a href="content/modules/31-functions/prep.qmd">Functions</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -763,10 +814,12 @@ Lab 3: Proof Practice</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-7" class="level2">
-<h2 class="anchored" data-anchor-id="week-7">Week 7</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 7 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -795,9 +848,9 @@ Lab 3: Proof Practice</td>
 Counting<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/40-counting-1/prep.html">Counting</a></td>
+<a href="content/modules/40-counting-1/prep.qmd">Counting</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/40-counting-1/in-class.html">Counting Activity</a><br>
+<a href="content/modules/40-counting-1/in-class.qmd">Counting Activity</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -821,7 +874,7 @@ Counting<br>
 Counting<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/41-counting-2/prep.html">Permutations and Combinations</a></td>
+<a href="content/modules/41-counting-2/prep.qmd">Permutations and Combinations</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -845,7 +898,7 @@ Counting<br>
 Counting<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/45-lattice-paths/prep.html">Counting Lattice Paths</a></td>
+<a href="content/modules/45-lattice-paths/prep.qmd">Counting Lattice Paths</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/04-lattice-paths.ipynb">Lab 4: Counting Lattice Paths</a><br>
 </td>
@@ -856,10 +909,12 @@ Counting<br>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-8" class="level2">
-<h2 class="anchored" data-anchor-id="week-8">Week 8</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 8 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -888,9 +943,9 @@ Counting<br>
 Recurrence Relations<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/50-recursion-recurrence/prep.html">Recursion and Recurrence Relations</a></td>
+<a href="content/modules/50-recursion-recurrence/prep.qmd">Recursion and Recurrence Relations</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/50-recursion-recurrence/in-class.html">Tower of Hanoi</a><br>
+<a href="content/modules/50-recursion-recurrence/in-class.qmd">Tower of Hanoi</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -912,9 +967,9 @@ Recurrence Relations<br>
 <td></td>
 <td class="smaller syllabus-item-objective"></td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/51-recursion-recurrence-2/prep.html">More Recursion and Recurrence Relations</a></td>
+<a href="content/modules/51-recursion-recurrence-2/prep.qmd">More Recursion and Recurrence Relations</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/51-recursion-recurrence-2/in-class.html">Parking Spaces</a><br>
+<a href="content/modules/51-recursion-recurrence-2/in-class.qmd">Parking Spaces</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -936,7 +991,7 @@ Recurrence Relations<br>
 <td></td>
 <td class="smaller syllabus-item-objective"></td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/55-numerical-algorithms/prep.html">Numerical Algorithms</a></td>
+<a href="content/modules/55-numerical-algorithms/prep.qmd">Numerical Algorithms</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/05-gradient-descent.ipynb">Lab 5: Analyzing Gradient Descent</a><br>
 </td>
@@ -948,10 +1003,12 @@ Lab 4: Counting Lattice Paths</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-9" class="level2">
-<h2 class="anchored" data-anchor-id="week-9">Week 9</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 9 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -980,7 +1037,7 @@ Lab 4: Counting Lattice Paths</td>
 Asymptotics<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/60-asymptotics/prep.html">Asymptotics and Big-Oh Notation</a></td>
+<a href="content/modules/60-asymptotics/prep.qmd">Asymptotics and Big-Oh Notation</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1004,7 +1061,7 @@ Asymptotics<br>
 Asymptotics<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/61-complexity/prep.html">Analyzing Algorithms</a></td>
+<a href="content/modules/61-complexity/prep.qmd">Analyzing Algorithms</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1028,7 +1085,7 @@ Asymptotics<br>
 Graph Theory<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/70-graphs-1/prep.html">Graphs and Graph Theory</a></td>
+<a href="content/modules/70-graphs-1/prep.qmd">Graphs and Graph Theory</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"><strong>Due</strong><br>
 Lab 5: Gradient Descent</td>
@@ -1038,10 +1095,12 @@ Lab 5: Gradient Descent</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-10" class="level2">
-<h2 class="anchored" data-anchor-id="week-10">Week 10</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 10 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -1091,7 +1150,7 @@ Lab 5: Gradient Descent</td>
 Graph Theory<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/71-graphs-2/prep.html">More Graph Theory</a></td>
+<a href="content/modules/71-graphs-2/prep.qmd">More Graph Theory</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1115,7 +1174,7 @@ Graph Theory<br>
 Graph Theory<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/72-graphs-3/prep.html">Network Science</a></td>
+<a href="content/modules/72-graphs-3/prep.qmd">Network Science</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 <a href="https://colab.research.google.com/github/PhilChodrow/CSCI-0200/blob/main/assignments/labs/06-network-science.ipynb">Lab 6: Introduction to Network Science</a><br>
 </td>
@@ -1126,10 +1185,12 @@ Graph Theory<br>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-11" class="level2">
-<h2 class="anchored" data-anchor-id="week-11">Week 11</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 11 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -1158,7 +1219,7 @@ Graph Theory<br>
 Probability<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/80-probability-1/prep.html">Introducing Discrete Probability</a></td>
+<a href="content/modules/80-probability-1/prep.qmd">Introducing Discrete Probability</a></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1182,9 +1243,9 @@ Probability<br>
 Probability<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/81-probability-2/prep.html">Sample Spaces, Conditional Probability</a></td>
+<a href="content/modules/81-probability-2/prep.qmd">Sample Spaces, Conditional Probability</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/81-probability-2/in-class.html">Sample Spaces, Conditional Probability</a><br>
+<a href="content/modules/81-probability-2/in-class.qmd">Sample Spaces, Conditional Probability</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1217,10 +1278,12 @@ Lab 6: TBD</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-12" class="level2">
-<h2 class="anchored" data-anchor-id="week-12">Week 12</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 12 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -1249,9 +1312,9 @@ Lab 6: TBD</td>
 Probability<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/82-probability-3/prep.html">Conditional Probability and Bayes' Theorem</a></td>
+<a href="content/modules/82-probability-3/prep.qmd">Conditional Probability and Bayes' Theorem</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
-<a href="./content/modules/82-probability-3/in-class.html">Bayes' Rule and DNA Testing</a><br>
+<a href="content/modules/82-probability-3/in-class.qmd">Bayes' Rule and DNA Testing</a><br>
 </td>
 <td class="smaller syllabus-item-assignment"></td>
 <td></td>
@@ -1275,7 +1338,7 @@ Probability<br>
 Probability<br>
 </td>
 <td class="smaller syllabus-item-assignment"><strong>Prep</strong><br>
-<a href="./content/modules/83-probability-4/prep.html">Random variables and expectation</a></td>
+<a href="content/modules/83-probability-4/prep.qmd">Random variables and expectation</a></td>
 <td class="smaller syllabus-item-assignment"><strong>In Class</strong><br>
 TBD<br>
 </td>
@@ -1308,10 +1371,12 @@ Lab 7: TBD</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="week-13" class="level2">
-<h2 class="anchored" data-anchor-id="week-13">Week 13</h2>
-<table data-quarto-postprocess="true" class="table">
+
+        
+        
+            <h2 class="anchored"> Week 13 </h2>
+            
+<table class="caption-top table" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 12%">
@@ -1346,13 +1411,15 @@ Lab 7: TBD</td>
 </tr>
 </tbody>
 </table>
+
+    
+
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 <nav id="schedule-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
-</section>
 </div>
 <section id="final-exam" class="level2">
 <h2 class="anchored" data-anchor-id="final-exam">Final Exam</h2>
@@ -1362,7 +1429,7 @@ No matching items
 
 </section>
 
-<p><br> <br> <span style="color:grey;">© Phil Chodrow, 2023</span></p></main> <!-- /main -->
+<p><br> <br> <span style="color:grey;">© Phil Chodrow, 2024</span></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1398,18 +1465,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1441,7 +1497,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1476,7 +1572,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1491,15 +1591,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1508,7 +1621,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1550,6 +1671,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1625,7 +1769,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
-        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);
