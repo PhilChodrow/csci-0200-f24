@@ -16,4 +16,6 @@ private-notes.qmd
 scans
 evaluations
 warmup-solutions
-solutions
+labs
+/env/
+*_files
