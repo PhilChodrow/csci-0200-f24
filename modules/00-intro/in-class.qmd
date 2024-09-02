@@ -1,0 +1,474 @@
+---
+title: "<span style='color:#EF476F'>Welcome </span> to CSCI 0200!"  
+subtitle: "Math Foundations of Computing, F23"  
+date: ""
+author: 'Prof. <span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
+title-slide-attributes:
+  data-background-opacity: "0.0"  
+  data-background-color: "#23395B"  
+format:
+  revealjs:
+    menu: false
+    theme: 
+      - default      
+      - ../../assets/css/reveal-style/layouts.css 
+      - ../../assets/css/reveal-style/components.css 
+      - ../../assets/css/reveal-style/colors-fonts/simple.scss
+    slide-level: 2
+    margin: 0.00
+    self-contained: false
+warning: false 
+message: false
+cache: true 
+from: markdown+emoji
+---
+
+## Who's In the Room? 
+
+<br> <br> <br> 
+
+### Go to `menti.com` 
+
+### Enter code  `3390 9519`
+
+### Respond to the first prompt. 
+
+### Keep the tab open -- we'll come back to it
+
+## {background-color="#EF476F"}
+
+<br> <br> <br> <br>
+
+### Soooooo
+### [...a math class]{.fragment}
+### [...in the CS department]{.fragment}
+### [...?]{.fragment}
+
+
+
+
+## {.split-60}
+
+::: {.column}
+
+### CS and Math Go Way Back
+
+<br>
+
+Ada Lovelace was an English mathematician and author of the first published computer 
+program (1840).
+
+Her program was designed to compute an important sequence of mathematical constants on the "Difference Engine" designed by Charles Babbage.
+
+Babbage never completed his Difference Engine, so Lovelace's program was never run.
+
+Lovelace described her approach to math as "*poetical science*."
+:::
+
+::: {.column}
+
+![](../../assets/img/figs/Ada_Lovelace_portrait.jpeg)
+
+[*Ada King, Countess of Lovelace. Portrait possibly by Alfred Edward Chalon, image from Wikipedia.*]{.footnote}
+
+:::
+
+## {.split-60}
+
+::: {.column}
+
+### CS and Math Go Way Back
+
+<br>
+
+Alan Turing was an English mathematician who played a major role in developing the theory of computer science and AI. 
+
+Turing proved that some tasks are *impossible* for algorithms to perform, no matter how powerful or clever they are.  
+
+The "Nobel Prize in Computer Science" is named the *Turing Award*. 
+
+*Turing was chemically castrated as a punishment for homosexuality in 1953. The UK managed to apologize for this in...2009.*
+
+:::
+
+::: {.column}
+
+<br> 
+
+![](../../assets/img/figs/turing.jpeg)
+
+
+:::
+
+## {.split-60}
+
+::: {.column}
+
+
+### CS and Math Go Way Back
+
+<br>
+
+John von Neumann was a Hungarian mathematician who guided the development of the first digital computers. 
+
+The "von Neumann architecture" remains the high-level architectural basis of the design of modern computers. 
+
+
+*If you're wondering what the first digital computers were used for, watch Oppenheimer.* 😬😬😬
+
+:::
+
+::: {.column}
+
+<br> 
+
+![](../../assets/img/figs/von-neumann.jpeg)
+
+
+:::
+
+
+## {background-color="#EF476F"}
+
+<br> <br> <br> <br> <br> <br>
+
+### Ok, but...
+
+### ...what *is* mathematics? 
+
+
+
+## {.split-50}
+
+
+#### Mathematics is the heart of [AI and data science]{.alert-2}
+
+<br><br>
+
+
+![](../../assets/img/figs/pagerank.png)
+
+[Brin, Sergey. "The PageRank citation ranking: bringing order to the web." *Proceedings of ASIS*, 1998 98 (1998): 161-172.
+]{.footnote} 
+
+## {.split-40}
+
+
+#### Mathematics is the heart of [machine learning]{.alert-2}
+
+
+::: {.column}
+
+<br><br><br><br><br><br><br><br>
+
+Support Vector Machine (SVM) is an algorithm for classifying data into groups based on past observations. 
+
+
+[Deisenroth, Faisal, and Ong (2020). *Mathematics for Machine Learning* ]{.footnote} 
+
+:::
+
+::: {.column}
+
+
+<br> 
+![](../../assets/img/figs/kernels.png){width=420}
+
+
+
+:::
+
+## {.split-30}
+
+
+
+
+#### Mathematics is the heart of [algorithmic problem-solving]{.alert-2}
+
+::: {.column}
+
+<br> <br> <br> <br> <br> 
+
+Dijkstra's algorithm finds shortest paths between points in a graph. 
+
+(Used for e.g. vehicle routing)
+
+
+:::
+
+::: {.column}
+
+<br><br>
+![](../../assets/img/figs/djikstra-proof.png)
+
+:::
+
+## {background-color="#EF476F"}
+
+<br> <br> <br> <br> <br> <br> <br> 
+
+### Math Foundations: What You Need [Now]{.alert} To Do All That Stuff [Later]{.alert}
+
+## Math and Us
+
+<br> <br> <br> <br>
+
+
+### Respond to the **second** prompt on the Menti poll. 
+
+*If you closed the tab, go to `menti.com`  and enter code ``3390 9519``.* 
+
+
+
+
+
+
+## In This Class, You Will...
+
+<br> <br> <br> 
+
+:::: {.font-larger}
+::: {.font-larger}
+...build a mathematical toolbox for reasoning theoretically about data structures, algorithms, and the world around you. 
+
+...test mathematical theory against computational experiments. 
+
+...cultivate a joyful relationship with the practice of mathematics. 
+
+:::
+::::
+
+
+## The Big Picture
+
+```{mermaid}
+mindmap
+  root((CSCI 0200))
+    )**Module 1**(
+        (Logic)
+          (Propositional logic)
+            (Boolean algebra)
+            (Circuit design)
+        (Sets)
+            (Set Operations)
+            (Logical quantifiers)
+    )**Module 2**(
+        (Relations)
+            (Functions)
+            (Equivalence Relations)
+        (Proof Techniques)
+            (Direct)
+            (Indirect)
+            (Contradiction)
+            (Induction)
+                (Weak)
+                (Strong)
+    )**Module 3**(
+        (Counting)
+            (Sum and product principles)
+            (Permutations and combinations)
+            (Combinatorial proofs)
+        (Recurrence Relations)
+            (Asymptotics)
+            (Divide and combine)
+    )**Module 4**(
+        (Probability)
+            (Distributions)
+                (Conditioning)
+            (Random variables)
+                (Expectation)
+        (Graphs)
+            (Special graphs)
+                (Trees )
+                (Cycles)
+            (Algorithms)
+```
+
+
+## {background-image="../../assets/img/pics/veggies.jpeg" background-size="contain" background-color="black"}
+
+### Your Affinity Vegetable
+
+<br> <br> 
+
+### 1. Split into teams
+
+### 2. Go around and share your name and:
+
+##### If you were a vegetable, which vegetable would you be [and why]{.alert}? 
+
+## {background-image="../../assets/img/pics/veggies.jpeg" background-size="contain" background-color="black"}
+
+### Your Affinity Vegetable
+
+<br> <br> 
+
+### 3. [Team leader]{.alert}: lead your team in finding a [*delicious dish*]{.alert2} that incorporates all of your vegetables.
+
+##### Be ready to share! 
+
+
+## {background-color="#EF476F"}
+
+<br> <br> <br> <br> <br> <br> <br> 
+
+### In a [flipped classroom]{.alert}, you complete readings and watch lectures [before]{.alert-2} our scheduled class time. 
+
+
+## 
+
+### Mondays and Wednesdays
+
+##### Before Each Class (1.5-2 hrs)
+
+- **Prep**: Videos and readings 
+- **Warmups**: practice problems, graded on completion
+
+##### In Class (~1 hr)
+
+- Questions
+- Group work
+- Activities
+- Additional topics, demonstrations, etc. 
+
+## 
+
+### Friday Labs
+
+- 7 total throughout the semester
+- Start in class with assigned groups
+- Finish as homework and submit a week later 
+
+#### Assessment
+
+Assessed as **Excellent (E)**, **Meets Expectations (M)**, **Needs Revision (R)**, or **Not Complete (N)**. You want **E**s and **M**s. 
+
+#### Revision
+
+**You can revise and resubmit** your labs after your first assessment in order to achieve a higher assessment. 
+
+## 
+
+### Quizzes
+
+- 4 total, on Fridays
+- Timed for 45 minutes (**contact me with DRC letters!!**)
+
+#### Learning Targets
+
+- We have 20 Learning Targets related to core course competencies. 
+- You'll have multiple opportunities to complete each Learning Target, but **you only need to do it once**. 
+- 4-6 targets are added on each quiz, but you only need to attempt ones you haven't already gotten. 
+
+#### Final Exam
+
+Includes opportunities to complete all 20 learning targets, with 3 hours. 
+
+
+## 
+
+### A Typical 3-Week Module
+
+```{mermaid}
+gantt
+    title A CSCI 0200 Module
+    axisFormat %A
+    tickInterval 1day
+    section Week A
+    Prep, warmup            :active, a1, 2014-01-06, 1d
+    Class            :2014-01-06, 1d
+    Prep, warmup         :active, a2, 2014-01-08, 1d
+    Class         :2014-01-08, 1d
+    Prep, warmup    :active, a1, 2014-01-10, 1d
+    Lab A           :a3, 2014-01-10, 1d
+    section Week B
+    Prep, warmup            :active, a1, 2014-01-06, 1d
+    Class            :2014-01-06, 1d
+    Prep, warmup         :active, a2, 2014-01-08, 1d
+    Class         :2014-01-08, 1d
+    Prep, warmup    :active, a1, 2014-01-10, 1d
+    Lab B           :a3, 2014-01-10, 1d
+    Lab A due         :done, b3, 2014-01-10, 1d
+    section Week C
+    Prep, warmup            :active, b1, 2014-01-06, 1d
+    Class            :2014-01-06, 1d
+    Prep, warmup         :active, b2, 2014-01-08, 1d
+    Class            :2014-01-08, 1d
+    Lab B due         :done, b3, 2014-01-10, 1d
+    Quiz              :crit, done, c3,  2014-01-10, 1d
+ ```   
+
+
+
+##  
+
+
+ 
+
++-----+-----------------------------------+-------------------------------+
+|Tier | Learning Targets                  | Labs                          |
++:====+===================================+===============================+
+|**A**|   &#9634; &#9634; &#9634; &#9634; | **E**: &#9634; &#9634;        |
+|     |                                   |  &#9634; &#9634;<br>          |
+|     |                                   | **M**: &#9634; &#9634;        |
+|     |                                   | &#9634;                       |
+|     |                                   |                               |
++-----+-----------------------------------+-------------------------------+
+|**B**|   &#9634; &#9634;                 | **E**: &#9634; &#9634;<br>    |
+|     |                                   | **M**: &#9634; &#9634;        |
+|     |                                   | &#9634; &#9634;       <br>    |
+|     |                                   | **R**: &#9634;                |
+|     |                                   |                               |
++-----+-----------------------------------+-------------------------------+
+|**C**|   &#9634; &#9634;                 | **M**: &#9634; &#9634;        |
+|     |                                   | &#9634; &#9634;               |
+|     |                                   | &#9634; <br>                  |
+|     |                                   | **R**: &#9634;                |
++-----+-----------------------------------+-------------------------------+
+|**D**|   &#9634; &#9634; &#9634; &#9634; | **M**: &#9634; &#9634;        |
+|     |   &#9634; &#9634; &#9634;         | &#9634; &#9634;               |
+|     |   &#9634; &#9634; &#9634;         |                               |
++-----+-----------------------------------+-------------------------------+
+
+
+## Support Resources
+
+#### **Academic support**
+
+- Student Hours are **your time**. I'm sending around a poll to help schedule Student Hours at a time that works for you. 
+- Evening Peer Help, hours TBD. 
+- Our Assistant Laboratory Instructor Smith Gakuya and Assistant In Instruction Noah Rizika holds Student Hours for CSCI 0200. 
+- EdStem: Online Q&A forum. 
+
+#### **Clearing barriers to learning**
+
+- The DRC can help you obtain a letter of accommodation for timed assessments. 
+- **Legally, I need your letter in order to offer you accommodations.**
+
+## Classroom Environment
+
+<br> <br> 
+
+Inclusion, access, and participation are **collective projects**. 
+
+- Discrimination is unjust and it sucks. Don't do it. 
+- Address people respectfully --- chosen names and pronouns. 
+- Don't leave each other behind in group work. 
+- Bragging about something being easy just makes the people around you feel bad.  
+- Are you fast at the material? Cool. Use your ability to *support the learning* of the people around you. 
+
+I am a **mandatory reporter** of potential incidents of sexual violence or harassment. There is a link to some confidential resources on the syllabus. 
+
+
+
+## For Wednesday
+
+<br> <br> 
+
+#### [**Entrance Survey**]{.alert-2}: tell me about yourself and help me find your teammates for lab. 
+
+#### [**Student Hours Scheduling Poll**]{.alert-2}: let me know when you're available for Student Hours.
+
+#### [**Math autobiography**]{.alert-2}: your history as a learner and user of mathematics. 
+
+*These assignments are on Canvas.*  

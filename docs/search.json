@@ -1,0 +1,680 @@
+[
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "This schedule is tentative and subject to change.\nWarmups are due every class day, even if they are not listed under the “Due” column.\n© Phil Chodrow, 2024",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#final-exam",
+    "href": "schedule.html#final-exam",
+    "title": "Schedule",
+    "section": "Final Exam",
+    "text": "Final Exam\nOur final exam will be another quiz covering all twenty Learning Targets. So, it’s just like Quiz 4, except you’ll have 3 hours instead of 50 minutes.",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "pages/mask-policy.html",
+    "href": "pages/mask-policy.html",
+    "title": "Masks Are Required in CSCI 0200",
+    "section": "",
+    "text": "The Computer Science Department policy states that:\n\nWe in the Computer Science department value a safe learning and working environment for all. While we can’t eliminate the risks associated with COVID-19, evidence suggests that widespread masking can significantly reduce the transmission and severity of disease. In order to protect the health of our community, the CS department recommends that students and faculty wear masks in CS learning spaces, including classrooms, office hours, and public areas. We acknowledge the College policy gives instructors the final say over classroom masking requirements, and expect all students to respect instructors’ stated policies in each course.\n\nIn alignment with this policy:\n\nMasks are required during scheduled class periods in Weeks 1 and 2 and after Thanksgiving break.\nMasks are encouraged during Student Hours and Peer Help.\nMasks are required during private meetings in my office.\n\nDuring the first week of class, I will stock masks that I will offer you in case you forget yours. In the second week of class, you will be responsible for bringing your own masks. If you arrive in class without one, I’ll ask you to leave class and come back once you have obtained a mask.\n\n\n\n  © Phil Chodrow, 2024",
+    "crumbs": [
+      "Additional Pages",
+      "Masks Are Required in CSCI 0200"
+    ]
+  },
+  {
+    "objectID": "pages/lab-assessment.html",
+    "href": "pages/lab-assessment.html",
+    "title": "Assessment of Labs",
+    "section": "",
+    "text": "Labs are assessed on a 4-part rubric similar to the EMRF rubric of Stutzman and Race:This particular scale is very close to the scale used by Peter-Michael Osera at Grinnell College.\nA lab report obtains the highest grade for which it meets all of the requirements.\nExcellent (E):\n\nThe lab includes a complete contributions statement describing the contributions of any collaborators, as well as external sources such as websites or ChatGPT.\nThe lab exhibits complete understanding of the material.\nThe lab has at worst, a few minor design errors or surface-level writing issues.\nMathematics\n\nIncluded typed mathematics is fully correct, including steps and final result.\nMathematics is correctly typed when required.\nMathematical work has all steps clearly justified as demonstrated in the solutions.\n\nEach stage of a calculation is justified by an appeal to a known result, identity, or formula.\nProofs are correct and justify their steps.\n\n\nAll required pictures from the board are included.\nAll coding experiments run and produce correct outputs.\n\nMeets Expectations (M):\n\nThe lab exhibits complete understanding of the material.\nThe lab includes a complete contributions statement describing the contributions of any collaborators, as well as external sources such as websites or ChatGPT.\nThe lab has some minor errors of correctness, design, or writing. Fixing these errors would demonstrate improved understanding of the material.\nMathematics\n\nIncluded typed mathematics is fully correct, including steps and final result.\nMathematics is mostly correctly typed, possibly with a few minor typing errors.\nMathematical calculations have some of their steps justified as demonstrated in the solutions.\n\nMost stages of calculations are justified by an appeal to a known result, identity, or formula.\nProofs usually justify their steps.\n\n\nAll coding experiments run and produce outputs which are close to expected.\n\nNeeds Revision (R):\n\nThe lab exhibits one or more significant misunderstandings of the material, or many minor errors.\nCoding experiments do not run or produce substantially incorrect output.\nMathematics\n\nIncluded typed mathematics is incorrect in at least one problem, including steps or final result.\nMathematics is correctly typed in at least some cases, with many major errors.\nMost or all mathematical calculations and proofs do not include a justification of their steps.\n\nThe contributions statement is partial or missing.\n\nNot Completed (N):\n\nNot completed to a degree sufficient to demonstrate understanding of the material.\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "pages/learning-targets.html",
+    "href": "pages/learning-targets.html",
+    "title": "Learning Targets",
+    "section": "",
+    "text": "L1:\n\n\nI can use quantified logic to express English sentences and mathematical concepts.\n\n\n\n\nL2:\n\n\nI can correctly simplify logical expressions which include quantifiers, negations (NOT), conjunctions (AND), disjunctions (OR), and implications.\n\n\n\n\nL3:\n\n\nI can use rules of logical inference to determine whether a conclusion follows logically from a set of premises.\n\n\n\n\nS1:\n\n\nI can describe sets using both roster and set-builder notations.\n\n\n\n\nS2:\n\n\nI can perform operations on sets (union, intersection, difference, complement) and determine the cardinality of a set.\n© Phil Chodrow, 2024",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/learning-targets.html#logic-and-set-theory",
+    "href": "pages/learning-targets.html#logic-and-set-theory",
+    "title": "Learning Targets",
+    "section": "",
+    "text": "L1:\n\n\nI can use quantified logic to express English sentences and mathematical concepts.\n\n\n\n\nL2:\n\n\nI can correctly simplify logical expressions which include quantifiers, negations (NOT), conjunctions (AND), disjunctions (OR), and implications.\n\n\n\n\nL3:\n\n\nI can use rules of logical inference to determine whether a conclusion follows logically from a set of premises.\n\n\n\n\nS1:\n\n\nI can describe sets using both roster and set-builder notations.\n\n\n\n\nS2:\n\n\nI can perform operations on sets (union, intersection, difference, complement) and determine the cardinality of a set.",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/learning-targets.html#proof-writing",
+    "href": "pages/learning-targets.html#proof-writing",
+    "title": "Learning Targets",
+    "section": "Proof-Writing",
+    "text": "Proof-Writing\n\n\n\nPF1:\n\n\nI can use the element method to prove that one set is a subset of another, or that two sets are equal.\n\n\n\n\nPF2:\n\n\nI can prove mathematical statements using proof-by-contradiction.\n\n\n\n\nPF3:\n\n\nI can correctly state the base case and inductive hypothesis in a proof by weak induction.\n\n\n\n\nPF4:\n\n\nI can prove the base case and inductive hypothesis in a proof by weak induction when they are supplied to me.\n\n\n\n\nPF5:\n\n\nI can write a complete proof by weak induction.\n\n\n\n\nPF6:\n\n\nI can write a complete proof by strong induction.\n\n\n\n\nFR1:\n\n\nI can prove that a supplied relation is or is not an equivalence relation.",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/learning-targets.html#counting",
+    "href": "pages/learning-targets.html#counting",
+    "title": "Learning Targets",
+    "section": "Counting",
+    "text": "Counting\n\n\n\nC1:  \n\n\nI can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems.\n\n\n\n\nC2:\n\n\nI can use permutations and combinations to count the number of candidate solutions to a given problem.\n\n\n\n\nR1:\n\n\nI can describe a mathematical process or algorithm using a recurrence relation.\n\n\n\n\nR2:\n\n\nI can use the tree method to determine the asymptotic runtime of a recursive algorithm.",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/learning-targets.html#probability",
+    "href": "pages/learning-targets.html#probability",
+    "title": "Learning Targets",
+    "section": "Probability",
+    "text": "Probability\n\n\n\nPR1:\n\n\nI can evaluate marginal, and joint probabilities of events on discrete sample spaces.\n\n\n\n\nPR2:\n\n\nI can use Bayes’ Theorem to evaluate conditional probabilities.\n\n\n\n\nPR3:\n\n\nI can evaluate expectations of random variables on discrete sample spaces.",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/learning-targets.html#graphs",
+    "href": "pages/learning-targets.html#graphs",
+    "title": "Learning Targets",
+    "section": "Graphs",
+    "text": "Graphs\n\n\n\nG1:\n\n\nI can write correct proofs of simple mathematical propositions about the structure of graphs.",
+    "crumbs": [
+      "Learning Targets"
+    ]
+  },
+  {
+    "objectID": "pages/llms.html",
+    "href": "pages/llms.html",
+    "title": "More on Language Models",
+    "section": "",
+    "text": "LLMs represent many dramatic technical achievements in algorithms, machine learning, statistics, human-computer interaction (HCI), chip-design, and many other fields. They are impressive artifacts! Anyone who tells you LLMs are not impressive technical achievements is not looking carefully.\n\nHowever…\n\nYou are being routinely misled about LLMs by secretive actors who want you to believe these models are more capable than they are.\nThe labor required for reinforcement learning with human feedback is low-paying, deeply traumatizing, and disproportionately falls on the Global South.\nLLMs are already leading to degradation in online information ecosystems, human creative production, and environmental resources.\nWhile boosters promise more leisure and creative opportunity, the long-term trend of automation and AI is to reduce wages. Generative language models are already contributing to layoffs.\nCompanies training LLMs are stealing from authors and publishers to assemble their training data.\nLLMs systematically reproduce harmful stereotypes along axes of gender and race.\nIncreases in the amount of resources required to train LLMs are concentrating power in the hands of a small number of tech corporations.\nLLMs regularly generate responses that are humorously or dangerously wrong.\n\n\n\nLLMs Are Like Cars\nI encourage you to think of LLMs like you think about gas cars.\n\nLike cars, LLMs can be extremely helpful. One day, it might even be necessary to use LLMs in your daily life.\nLike cars, every time you use an LLM you make a small contribution toward environmental degradation.\nAs with fossil-fuel cars, large companies with profit motives are regularly misleading you about the impacts and harms of this technology.\nLike cars, LLMs can get you where you’re going faster. But by going fast, you might miss out on important joy, learning, or experience.\n\n\n\n\n\n  © Phil Chodrow, 2024",
+    "crumbs": [
+      "Additional Pages",
+      "More on Language Models"
+    ]
+  },
+  {
+    "objectID": "modules/10-logic-1/in-class.html",
+    "href": "modules/10-logic-1/in-class.html",
+    "title": "In Class: Logical Statements and Truth Tables",
+    "section": "",
+    "text": "© Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "modules/10-logic-1/prep.html",
+    "href": "modules/10-logic-1/prep.html",
+    "title": "Preparation: Logical Statements and Truth Tables",
+    "section": "",
+    "text": "Starting today, we are going to start introducing new course content through videos, readings, and warmup problems. Today’s prep is shorter than usual and should take a little more than an hour.\n© Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "modules/10-logic-1/prep.html#optional-reading",
+    "href": "modules/10-logic-1/prep.html#optional-reading",
+    "title": "Preparation: Logical Statements and Truth Tables",
+    "section": "Optional Reading:",
+    "text": "Optional Reading:\nThis reading covers the same material but has more examples from theoretical mathematics.\n\nBOP 2.1-2.2"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section",
+    "href": "modules/01-math-and-me/in-class.html#section",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Quick Hits\nIs this a good class to take if I’m not considering further coursework in CS? You’re welcome here, but it’s likely that you’ll get more out of courses in Math/Stats.\nAre the warmups also graded using EMRN grading? No, warmups are just graded Complete/Incomplete.\nWhere will warmups be posted? I put them on the course website, but they’re also linked from Canvas.\nWhat do labs look like for a math class?  You’ll see. 😈\nCan I watch lectures and do warmups ahead of time? That’s totally fine as long as they are fresh in your mind for class.\nI like coming to office hours.  That’s great! Everyone else should do that too. 😁"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-1",
+    "href": "modules/01-math-and-me/in-class.html#section-1",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Your Affinity Vegetable\n \n1. Split into teams\n2. Go around and share your name and:\nIf you were a vegetable, which vegetable would you be and why?"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-2",
+    "href": "modules/01-math-and-me/in-class.html#section-2",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Your Affinity Vegetable\n \n3. Team leader: lead your team in finding a delicious dish that incorporates all of your vegetables.\nBe ready to share!"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-3",
+    "href": "modules/01-math-and-me/in-class.html#section-3",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "First, just write (4 minutes)\n \nWhat’s a way in which your previous classmates have helped you feel welcome or supported in your learning?\n\nWhat’s a way in which your previous classmates have made you feel unwelcome or discouraged in your learning?"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-4",
+    "href": "modules/01-math-and-me/in-class.html#section-4",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "In Groups (8 mins)\n 🥗🥬🥕🍉🥑🍅🍇🥝🥔🍍🍊🍌🍈🥭🍎🍒🍠🍓🍑🥒🍋🍆🌽🫑🍏🍐🥦🌶\n\n\nYour name\nYour affinity vegetable and your “why”\nYour way in which others have helped you feel welcome or supported in your learning\n\nAfter everyone has spoken, go around again with:\n\nYour way in which others have made you have made you feel unwelcome or discouraged in your learning?\n\n 🥗🥬🥕🍉🥑🍅🍇🥝🥔🍍🍊🍌🍈🥭🍎🍒🍠🍓🍑🥒🍋🍆🌽🫑🍏🍐🥦🌶"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-5",
+    "href": "modules/01-math-and-me/in-class.html#section-5",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Writing Time Again (3 minutes)\n \nWhat’s something you are especially good at?\nWere you ever not good at it?\nHow did you get good at it?"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-6",
+    "href": "modules/01-math-and-me/in-class.html#section-6",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Back in Groups (5 mins)\n \n\nYour name and affinity vegetable\nYour superpower! Something you are especially good at.\n\nOnce everyone has spoken, go around again with:\n\nHow did you get good at your superpower?"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-9",
+    "href": "modules/01-math-and-me/in-class.html#section-9",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Syllabus Review: Calculating Final Grades\n \nFirst Row: How many Learning Targets could a student not satisfy and still earn an A-? How many Labs could a student miss and still earn an A-?\nSecond Row: describe, in terms of Learning Targets, Labs, and Warmups, a scenario in which a student would earn a B+.\nThird Row: which of these assignment types have “partial credit”? Which of them have a chance to try again?\n\nWarmups\nQuiz problems\nLab reports"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#if-time-mathematical-writing",
+    "href": "modules/01-math-and-me/in-class.html#if-time-mathematical-writing",
+    "title": "Mathematics and Me",
+    "section": "(If Time) Mathematical Writing",
+    "text": "(If Time) Mathematical Writing\nMathematical writing is something we’ll be doing a lot of in this course, and we’re about to start with it in our upcoming warmup and lab assignment. Let’s compare and contrast two examples of mathematical writing.\n\nProve that the sum of two even integers is also even."
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-10",
+    "href": "modules/01-math-and-me/in-class.html#section-10",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Solution 1\n\\(2i + 2j = 2(i + j)\\)"
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-11",
+    "href": "modules/01-math-and-me/in-class.html#section-11",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Solution 2\n\nProposition 1 (Sum of Even Integers is Even) Let \\(m\\) and \\(n\\) be any two even integers. Then, \\(m+n\\) is also an even integer.\n\n\nProof. Let \\(m\\) and \\(n\\) be any two even integers. Then, there is some integer \\(i\\) such that \\(m = 2i\\), and similarly there is some integer \\(j\\) such that \\(n = 2j\\). We can then write\n\\[\nm + n = 2i + 2j = 2(i + j)\\;.\n\\]\nThe second equality follows from the distributive law of multiplication. So, \\(m+n\\) can be written in the form \\(2k\\) for the choice \\(k = i+j\\). Therefore, \\(m+n\\) is an integer, as was to be shown."
+  },
+  {
+    "objectID": "modules/01-math-and-me/in-class.html#section-12",
+    "href": "modules/01-math-and-me/in-class.html#section-12",
+    "title": "Mathematics and Me",
+    "section": "",
+    "text": "Exercise\nDraft a proof that the sum of two odd integers is also even. It’s ok not to write out complete sentences, but use abbreviations that would help remind you which sentences to put where.\nFor more tips, see the guide to Writing Mathematics Well by Francis Su at Harvey Mudd College."
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Welcome to CSCI 0200: Math Foundations of Computing! In this course, we’ll study how to think about computation using mathematics. Historically, computer science emerged as a subfield of mathematics before “growing up” into its own discipline. Math remains one of the fundamental tools we use to solve advanced problems. You might know to expect mathematical reasoning in core theory courses like Theory of Computation (CSCI 0301) and Algorithms and Complexity (CSCI 0302), but you’ll also draw on mathematical thinking in courses like Artificial Intelligence (CSCI 0311), Programming Languages (CSCI 0313), Network Science (CSCI 0442), Machine Learning (CSCI 0451), Computer Graphics (CSCI 0461).\n© Phil Chodrow, 2024",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#flipped-class",
+    "href": "syllabus.html#flipped-class",
+    "title": "Syllabus",
+    "section": "Flipped Class",
+    "text": "Flipped Class\nCSCI 0200 is a flipped classroom. This means that our scheduled class periods will primarily be time for you to actively practice and get feedback. Your first introduction to new material will be through assigned readings, videos, and warmup problems.\n\nOn Mondays and Wednesdays, you will watch videos, complete readings, and do warmup problems before class. In class, we’ll discuss some of your questions from the warmups and work together on practice problems.\nOn most Fridays, you will watch videos, complete readings, and do warmup problems before class. During class, you’ll work in groups on Lab assignments. You’ll complete the Lab assignments outside of class and turn them in.\nOn four Fridays during the semester, you will complete a quiz in which you demonstrate your learning of our Learning Targets.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-activities",
+    "href": "syllabus.html#course-activities",
+    "title": "Syllabus",
+    "section": "Course Activities",
+    "text": "Course Activities\nCSCI 0200 is divided into four “modules,” each of which is three weeks long. Here’s the rough schedule that you can expect from a module:\n\n\n\n\n\ngantt\n    title A CSCI 0200 Module\n    axisFormat %A\n    tickInterval 1day\n    section Week A\n    Prep, warmup            :active, a1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, a2, 2014-01-08, 1d\n    Class         :2014-01-08, 1d\n    Prep, warmup    :active, a1, 2014-01-10, 1d\n    Lab A           :a3, 2014-01-10, 1d\n    section Week B\n    Prep, warmup            :active, a1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, a2, 2014-01-08, 1d\n    Class         :2014-01-08, 1d\n    Prep, warmup    :active, a1, 2014-01-10, 1d\n    Lab B           :a3, 2014-01-10, 1d\n    Lab A due         :done, b3, 2014-01-10, 1d\n    section Week C\n    Prep, warmup            :active, b1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, b2, 2014-01-08, 1d\n    Class            :2014-01-08, 1d\n    Lab B due         :done, b3, 2014-01-10, 1d\n    Quiz              :crit, done, c3,  2014-01-10, 1d\n\n\n\n\n\n\nMost days, you’ll prepare with videos and readings, and then complete warmup activities. These activities will prepare you for either class (practice, discussion), or lab. We’ll have our quiz roughly every third Friday.\n\nRationale\nThe overall format of CSCI 0200 is designed to help you apply the ideas and skills of the course to progressively higher stages of Bloom’s taxonomy of cognition (Anderson and Krathwohl (2001)).\n\nAnderson, Lorin W, and David R Krathwohl. 2001. A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom’s Taxonomy of Educational Objectives: Complete Edition. Addison Wesley Longman, Inc.\n\n\n\nBloom’s taxonomy of cognitive skills. Image credit: University of Florida\n\n\n\n\nBefore Class: Warmups\n\nWarmups are here to help you remember and understand new material. Each day, you’ll prepare for class by watching videos, completing readings, and solving a small number of relatively short warmup problems. You’ll then submit your solutions on Gradescope. You’ll get feedback on your solutions from our graders. Your warmup solutions are expected to show effort but are not graded for correctness.\n\n\n\n\n\n\nWarmups are due by 8:30am on the day of class. Warmups are never accepted late and there are no extensions. However, you can miss up to three warmups without any impact on your grade.\n\n\n\n\n\nClass on Mondays and Wednesdays: Questions, Activities, and Discussion\n\nBy the time you’ve completed the warmups and made it to class, I’m expecting that you have already made some effort to remember and understand the new material for that day. During class time on Mondays and Wednesdays, we’ll usually start with some time to discuss questions you might have from the day’s readings, videos, or warmups, to help build your understanding. Then, we’ll usually have time to work on problems in groups, or to further discuss topics. These activities will help you build your abilities to apply the material and use it to  analyze  more complicated problems.\n\n\nQuizzes (Every Third Friday)\n\nOn quizzes, you’ll demonstrate your ability to remember, understand, and apply key ideas and skills. We’ll have four quizzes throughout the semester. On each quiz, there will be one problem related to each of the learning targets that we have introduced in the course so far. We’ll introduce new Learning Targets on each quiz. There will be a total of 20 Learning Targets throughout the semester.\nYou are not expected to complete every problem on every quiz. Correctly completing 3-4 problems on each quiz is a good pace and positions you well for the final exam.\n\n\n\n\n\n\nOur final exam will be very similar to the final quiz, including one problem for all 20 learning targets in the course. The only difference is that you’ll have 3 hours instead of 50 minutes.\n\n\n\n\n\nLabs (Every Other Friday)\n\nIn labs, you’ll build your abilities to  analyze , evaluate, and create using the tools and topics from this class. We’ll have lab assignments in 7 weeks (skipping the weeks in which we have quizzes). You’ll start on lab assignments in groups in class on Fridays. You’ll complete the remaining problems and prepare your report, submitting the entire result as a typed PDF.\nLabs are due one week after the day we start them in class.\nYou may continue to work on your report with classmates, but your report should be written by you and reflect your own understanding of the material. A good heuristic: discussion and work at the whiteboard is great to share, but typed solutions or code should not be shared.\nLabs are assessed on a 4-point rubric. After receiving your assessment on your lab report, you may revise and resubmit your report for a higher assessment.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#warmups",
+    "href": "syllabus.html#warmups",
+    "title": "Syllabus",
+    "section": "Warmups",
+    "text": "Warmups\nWarmups are not graded for correctness. The two grades you can receive are “Complete” or “Incomplete/Missing.” A grade of Complete means that you made good effort on the problems and that your attempt demonstrates at least partial understanding of the reading and videos. Most days, 1.5-2 hours of prep time will usually be sufficient for you to complete the readings, videos, and warmups. Yes, I know, this is a lot of prep. On the other hand, the lab reports are your only homework assignments.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#quizzes",
+    "href": "syllabus.html#quizzes",
+    "title": "Syllabus",
+    "section": "Quizzes",
+    "text": "Quizzes\nQuiz problems are assessed as Satisfactory (S) or Not Yet Satisfactory/Incomplete (NS). To earn an S on a quiz problem, you must complete the entire problem correctly, modulo minor errors unrelated to the learning goals of the course (like arithmetic typos).\nThere is no partial credit given on quiz problems. Solutions with minor errors that are otherwise demonstrate learning earn an S, while solutions that demonstrate important misunderstandings (or are not attempted) earn an NS.\nOnce you have earned an S on a quiz problem, you have completed the corresponding Learning Target. You never need to attempt another quiz problem corresponding to that target. So, if you earn an S on an L3 problem on Quiz 1, you should not try an L2 problem on Quiz 2. Although you are going to have many more than this number of problems placed in front of you, it is sufficient to earn an S on a total of 18 problems in order to earn an A in the course.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#labs",
+    "href": "syllabus.html#labs",
+    "title": "Syllabus",
+    "section": "Labs",
+    "text": "Labs\nSubmitted lab reports can receive one of four assessments: Here is some more detail on lab grades.\n\nExcellent (E): the lab exhibits complete understanding of the material and meets all requirements for mathematical content, coding, and expository writing. This report could serve as an exemplary solution for the assignment.\nMeets Expectations (M): the lab exhibits almost complete understanding of the material and meets most technical requirements. This report suggests that you have room to improve, but you understand the material well enough that you may potentially find it a better use of your time to move on.\nNeeds Revision (R): The lab exhibits some understanding of the material, but there are major issues that should be fixed before moving on.\nNot Completed (N): The lab isn’t really complete enough to demonstrate understanding of the material.\n\n\nRevising Labs\nAfter receiving feedback on your lab report, you may revise it in response to the feedback and resubmit it for a higher assessment. You can do this once for each lab report. The due date for revisions will depend on exactly when our grading time can finalize the first round of assessments, but will usually be about two weeks after you get your first round of feedback.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#your-final-grade",
+    "href": "syllabus.html#your-final-grade",
+    "title": "Syllabus",
+    "section": "Your Final Grade",
+    "text": "Your Final Grade\nYour final grade in the course will be determined by the bundle of Learning Targets and Lab assessments you achieve by the end of the course, according to the following table. To earn the given grade, you need to meet all requirements for both Learning Targets and Labs.\n\n\n\n\n\n\n\n\nTier\nLearning Targets(out of 20)\nLabs (out of 7)\n\n\n\n\nA\nAt least 18\n\nNo Ns or Rs\nAt least 4 Es\nRemainder Ms\n\n\n\nB\nAt least 14\n\nNo Ns\nAt most one R\nAt least 2 Es\nRemainder Ms\n\n\n\nC\nAt least 12\n\nAt most 1 N\nAt least 5 Ms or Es\nRemainder Rs\n\n\n\nD\nAt least 10\n\nAt most 2 Ns\nAt least 4 Ms or Es\n\n\n\n\nI reserve the right to modify this table, but only in ways that make it easier to achieve each grade tier.\n\nPartial Completion\nWhen you completely meet both requirements for one tier and completely meet one requirement for a higher tier, you earn the “+” version of the lower tier grade. For example, you may completely meet the requirements of a B on Learning Targets and completely meet the requirements of an A on Labs. In this case, the lower tier is a B and you earn the “+” version, so: a B+.\n\n\n\n\n\n\nIf you fully meet the requirements for the C tier and meet the requirements of the A tier for either Learning Targets or Labs (but not both), then you are considered to have partially met the requirements of the B tier. In this case, your final grade would be a C+.\n\n\n\n\n\nAssessment of Warmups\nYou can miss at most three warmups without penalty. After the first three missing warmups, your grade will lower by 1/3 of a letter grade for every two missing warmups. For example, an A would become an A-, a B+ would become a B, a B- would become a C+, etc.\n\n\nIn more detail, the penalties are:\n\n0-5 missing warmups: -0\n6-7 missing warmups: -1/3\n8-9 missing warmups: -2/3\n10-11 missing warmups: -1\netc.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#late-work-policies",
+    "href": "syllabus.html#late-work-policies",
+    "title": "Syllabus",
+    "section": "Late Work Policies",
+    "text": "Late Work Policies\n\nWarmups\nExtensions are never given on warmups unless under guidance from the DRC. Remember that you can miss up to three warmups without any impact on your final grade in the course.\n\n\nLabs\nFor each lab report, you may receive an extension of up to 3 days (72 hours) from the original due date. To do so, you should fill out this modified due date request form. You can count on receiving such an extension without a negotation if you:\n\nRequest the extension at least one day (24 hours) in advance of the original due date.\nWrite short but thoughtful responses to the questions posed in the form.\n\nLabs that are turned in after the due date (or possibly the extended due date) will still be accepted and assessed. However, these late lab reports will count as your second submission, and the assessment you receive on that lab report will be final.\n\n\nQuizzes\nYou can reschedule quizzes under the following circumstances.\n\nYou have an emergency related to your health, mental health, or wellbeing, or the health, mental health, or wellbeing of your loved ones. No documentation is needed – just let me know.\nYou are traveling for a major athletic event. In this case, you must notify me at least two weeks in advance. Please notify me by email and cc your coach. Usually, athletic conflicts will result in you taking the quiz a day or two early.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#disabilities-and-clearing-barriers",
+    "href": "syllabus.html#disabilities-and-clearing-barriers",
+    "title": "Syllabus",
+    "section": "Disabilities and Clearing Barriers",
+    "text": "Disabilities and Clearing Barriers\nFor legal reasons, I am prohibited from offering accommodations to students who do not present letters of accommodation from the DRC. So, get a letter if you need it!\nIf any aspect of this course raises barriers to your full and equitable participation, it is my job to clear those barriers. A common way in which barriers arise is from unintentional failure to design for all students, including students with disabilities. I’ve done my best, but still may have fallen short! If you have a documented disability, please send me your letter of accommodation from the Disability Resource Center as soon as possible. You do not need to describe your disability or justify your accommodations. I will incorporate your accommodations and work to clear learning barriers to the best of my ability.\nIf you believe that you may have a disability, please contact the Disability Resource Center as soon as possible. The DRC works with students confidentially and never discloses disability-related information to faculty without your permission.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#academic-support",
+    "href": "syllabus.html#academic-support",
+    "title": "Syllabus",
+    "section": "Academic Support",
+    "text": "Academic Support\nNo matter who you are, it’s normal to feel challenged by your courses. We have many academic resources to support your success in CSCI 0200. I strongly encourage everyone to make use of all of these resources.\n\nMy Student Hours are time for you to come talk with me about any aspect of the course. We’ll usually hold Student Hours in the big lounge outside Room 224 (the one with the windows).\nExperienced CS students hold Peer Help hours most weekday evenings. These sessions are great times for you to work on Warmup problems (before class) and lab reports. You can also ask general questions about course content and connect with other students.\nOur Assistant in Instruction (ASI) is Smith Gakuya. Smith holds regular Student Hours many days, and is prepared to help you in CSCI 0200. Smith can also help you arrange tutoring for long-term academic support.\nEdStem is our online Q&A forum. It’s the best place to ask questions at irregular hours. It’s a good idea to check EdStem frequently, because your question may already have been answered there!",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#classroom-environment",
+    "href": "syllabus.html#classroom-environment",
+    "title": "Syllabus",
+    "section": "Classroom Environment",
+    "text": "Classroom Environment\nInclusion, access, and participation are collective projects. I expect all students to contribute to a healthy course environment.\nWe embrace diversity of age, background, beliefs, race, ethnicity, gender, gender identity, gender expression, national origin, religious affiliation, sexual orientation, and other apparent and non-apparent axes of identity. Discrimination is not tolerated in CSCI 0200. Discriminatory speech or acts may lead to engagement with the Community Standards Office.\nYou deserve to be addressed in the manner that reflects who you are. I welcome to tell me your pronouns and/or chosen name at any time, either in person or via email. I expect all students to address each other according to their expressed gender markers, and commit to doing the same.\nYou deserve to fully and equitably participate in our learning environment. I commit to ensuring that the materials and assessments in this course are accessible to all students, and I welcome feedback on where I can do better. Middlebury’s Disability Resource Center can help you remove barriers to learning in this and other courses.\nYou deserve a learning environment free from gender-based discrimination, sexual harassment, sexual assault, domestic violence, dating violence, and stalking. If you experience these behaviors or otherwise know of a Title IX violation, you have many options for support and/or reporting. Middlebury’s Civil Rights and Title IX Office (CRTIX) can help you navigate your options. Please be aware that I am a Responsible Employee, which means that I am required by the College to report incidents of sexual harassment or sexual violence to CRTIX. There are resources for emotional and mental health care, advocacy, and academic support listed here, some of which are confidential.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#we-can-help-you-borrow-a-laptop",
+    "href": "syllabus.html#we-can-help-you-borrow-a-laptop",
+    "title": "Syllabus",
+    "section": "We Can Help You Borrow a Laptop",
+    "text": "We Can Help You Borrow a Laptop\nAn especially important resource for access in many courses in the Department of Computer Science is a functioning laptop. If you ever find yourself temporarily in need of a laptop, we have 10 rotating Windows laptops that we can loan you. To request a laptop for short-term use (like a single class period), email me as soon as possible.\nOn Long-Term Use: College policy has changed recently to include the expectation that every student have a laptop available. The college provides laptops to those who need them where “need” is based on Student Financial Services calculations. If you anticipate needing a laptop for the whole term, we encourage you to inquire with Student Financial Services and the library first due to our smaller pool of equipment. If, however, the College will not be able to meet your needs in a timely fashion, please reach out to us so that we can work out a long-term laptop loan.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#collaborating-with-integrity",
+    "href": "syllabus.html#collaborating-with-integrity",
+    "title": "Syllabus",
+    "section": "Collaborating with Integrity",
+    "text": "Collaborating with Integrity\nCollaboration is welcome in some settings in this course. In all instances of collaboration, you should acknowledge your collaboration partner(s) and describe their contributions as part of your assignment submission.\n\nWarmups: collaboration is discouraged because I think warmups are useful as practice for the quizzes. If you do collaborate on warmups, you should acknowledge your collaboration partner in your submission.\nLabs: collaboration is encouraged (and partially mandatory). You’ll start labs in collaboration groups. You’re free to complete the assignment in your groups, or to complete the assignment on your own. All students should turn in an individual submission that reflects their own understanding and which acknowledges the contributions of their collaboration partners.\nQuizzes: collaboration is prohibited.\nIn-class activities: collaboration is encouraged (and sometimes mandatory).\nGeneral study: collaboration is encouraged!",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#about-chatgpt",
+    "href": "syllabus.html#about-chatgpt",
+    "title": "Syllabus",
+    "section": "About ChatGPT",
+    "text": "About ChatGPT\n\nWhat Is It?\nChatGPT is an example of a large language model (LLM). LLMs aim to produce helpful, human-like text with a combination of two major mechanisms:\n\nLLMs use next-token prediction to predict the next entries in a sequence of text by using the previous entries. This enables them to mimic human-produced text. So, if you saw the sequence “I love Math Foundations of _____”, you might guess that the next word might be “Computing” and that it’s probably not “Pineapples.”\nLLMs are trained using reinforcement learning with human feedback (RLHF) to produce sentences that are not just realistic but also helpful, nonoffensive, or accurate. They do this using a multistage training process that involves humans rating the quality of candidate texts.\n\nChatGPT and similar LLMs are shaping many conversations in education at Middlebury and beyond.\nWhile LLMs may have many benefits, they are also the subject of routine deception by powerful, motivated actors. They are powered by massive quantities of low-paying, traumatizing labor. LLMs and automation more generally are furthering labor instability, contributing to reduced wages, and are concentrating the power of a small number of large tech companies.\n\n\nIn This Class\n\nWork that you submit in this class must demonstrate your learning and understanding. Copy/paste from LLMs like ChatGPT does not do this, and is consequently a violation of academic integrity.\nYou are discouraged from using ChatGPT in any way on warmups. The reason is that warmups help you prepare for the quizzes; if you don’t practice on the warmups, you’ll do worse and get a lower grade.\nQuizzes are in-class assessments on which electronics are prohibited. This implies that ChatGPT is prohibited on quizzes.\nYou are free to consult ChatGPT (or other LLMs) when studying and when completing lab reports. If you do, you must treat ChatGPT as an unverified source. This means:\n\nYou must cite your source.\nYou must describe the contribution of the source to your submitted writeup.\nYou may paraphrase but may not quote ChatGPT.\nYou must describe what steps you have taken to check that your learning involving ChatGPT is indeed correct.\n\nYou are always personally responsible for the accuracy, quality, and integrity of your work.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#general-advice",
+    "href": "syllabus.html#general-advice",
+    "title": "Syllabus",
+    "section": "General Advice",
+    "text": "General Advice\nI am always happy to talk with you about your future plans, including internships, research opportunities, and graduate school applications. Because I am a creature of the academy, I am less knowledgeable about industry jobs, although you are welcome to ask about those too. You can drop in during Student Hours or email me to make an appointment.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#letters-of-recommendation",
+    "href": "syllabus.html#letters-of-recommendation",
+    "title": "Syllabus",
+    "section": "Letters of Recommendation",
+    "text": "Letters of Recommendation\nWriting letters of recommendation for students is a fundamental part of my job and something that I am usually very happy to do. Here’s how to ask me for a letter.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "problems/logic/implications-3.html",
+    "href": "problems/logic/implications-3.html",
+    "title": "",
+    "section": "",
+    "text": "We often write the biconditional “if and only if” as \\(p \\leftrightarrow q\\). Make a truth table for \\(p \\leftrightarrow q\\) by making a detailed truth table for its expanded form, \\((p \\rightarrow q) \\land (q \\rightarrow p)\\).\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "problems/logic/implications-1.html",
+    "href": "problems/logic/implications-1.html",
+    "title": "",
+    "section": "",
+    "text": "Consider the expression \\(\\lnot P \\land (Q \\rightarrow P)\\).\nUse logical equivalences to simplify this expression as far as you can. If you knew this expression was true, what could you conclude about \\(Q\\)?\nHint: Get everything in terms of \\(\\land\\), \\(\\lor\\), and \\(\\lnot\\) and then use the following two rules of logical equivalence:\n\nDistributive Law: \\(A \\land (B \\lor C) \\equiv (A \\land B) \\lor (A \\land C)\\).\nLaw of Excluded Middle: \\(A \\land \\lnot A \\equiv \\mathrm{F}\\), i.e. \\(A \\land \\lnot A\\) is a logical contradiction.\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "problems/logic/python-to-logic-1.html",
+    "href": "problems/logic/python-to-logic-1.html",
+    "title": "",
+    "section": "",
+    "text": "Your friend tells you about a cool function they wrote in Python. Their function accepts 3 boolean arguments and returns a boolean return value.\n\ndef f(p, q, r):\n    \"\"\"\n    p, q, and r are assumed to be booleans. \n    returns: boolean\n    \"\"\"\n    \n    a = p and q\n    b = not (q or r)\n    c = a and b\n    \n    return c\n\nPart A\nWrite a logical expression in terms of \\(p\\), \\(q\\), and \\(r\\) (using symbols like \\(\\lnot, \\lor, \\land\\)) which has the same value as the return value of your friend’s function f.\n\n\nPart B\nMake a truth table for your expression. Please show the values of a, b, and c in each line of your truth table.\nDo you notice anything strange about your truth table?\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "problems/logic/truth-tables-1.html",
+    "href": "problems/logic/truth-tables-1.html",
+    "title": "",
+    "section": "",
+    "text": "Part A\nCreate truth tables for each of the three logical expressions:\n\n\\((r \\lor p) \\land q\\)\n\\((r \\lor p) \\land (r \\lor q)\\)\n\\(r \\lor (p \\land q)\\)\n\n\n\nPart B\nTwo of these expressions are logically equivalent: no matter the truth values of \\(r\\), \\(p\\), and \\(q\\), the two expressions always evaluate to the same final truth value. Which are the two equivalent expressions?\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "problems/logic/implications-2.html",
+    "href": "problems/logic/implications-2.html",
+    "title": "",
+    "section": "",
+    "text": "Consider the following propositions:\n\n\\(P\\): I achieved a Satisfactory (S) assessment on at least 11 Learning Targets.\n\\(Q\\): I received an E on at least 4 Lab assignments.\n\\(R\\): I had an N or an R on at least one Lab assignment by the end of the semester.\n\\(S\\): I missed 4 or more warmups.\n\\(T\\): I earned an A in CSCI 0200.\n\nConstruct a correct logical statement using \\(\\lnot\\), \\(\\lor\\), \\(\\land\\), \\(\\rightarrow\\), and/or \\(\\leftrightarrow\\) to describe the relationship between these five propositions.\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Welcome to CSCI 0200: Math Foundations of Computer Science! In this course, we’ll learn to the fundamentals of mathematical reasoning about data structures and algorithms. We’ll learn how to address questions like:\n\nHow many possibilities does a search algorithm need to weed through in order to find the best solution to a problem?\nHow do we know that a certain algorithm works? How do we know how fast it is?\nWhat role do uncertainty and randomness play in computation?\n\n\n\n\n\n\nmindmap\n  root((CSCI 0200))\n    )**Module 1**(\n        (Logic)\n          (Propositional logic)\n            (Boolean algebra)\n            (Circuit design)\n        (Sets)\n            (Set Operations)\n            (Logical quantifiers)\n    )**Module 2**(\n        (Relations)\n            (Functions)\n            (Equivalence Relations)\n        (Proof Techniques)\n            (Direct)\n            (Indirect)\n            (Contradiction)\n            (Induction)\n                (Weak)\n                (Strong)\n    )**Module 3**(\n        (Counting)\n            (Sum and product principles)\n            (Permutations and combinations)\n            (Combinatorial proofs)\n        (Recurrence Relations)\n            (Asymptotics)\n            (Divide and combine)\n    )**Module 4**(\n        (Probability)\n            (Distributions)\n                (Conditioning)\n            (Random variables)\n                (Expectation)\n        (Graphs)\n            (Special graphs)\n                (Trees )\n                (Cycles)\n            (Algorithms)\n\n\n\n\n\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "modules/01-math-and-me/prep.html",
+    "href": "modules/01-math-and-me/prep.html",
+    "title": "Math Autobiography",
+    "section": "",
+    "text": "This assignment is adapted from Dr. Spencer Bagley at Westminster University.\nYour first assignment for CSCI 0200 is to write a short mathematical autobiography.\nThe purpose of this assignment is for you to reflect on your experiences with mathematics. We’ll be encountering a lot of different kinds of mathematics in this course, and relating that mathematics to our lives and our interests in computation. We’ll both get more out of this encounter if we understand what mathematical experiences you’re bringing with you.\n© Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "modules/01-math-and-me/prep.html#prompt",
+    "href": "modules/01-math-and-me/prep.html#prompt",
+    "title": "Math Autobiography",
+    "section": "Prompt",
+    "text": "Prompt\nDescribe your history as a learner and user of mathematics. You might include things like: experiences with teachers (at any level, in any course), good or bad teachers (and what made them good or bad), how your attitude towards mathematics has changed over the years, whether you like mathematics or not, what feels good about doing math, what feels bad about doing math.\nPlease conclude your autobiography with a brief paragraph describing how you’re feeling about starting CSCI 0200. Are you nervous? Excited? What have you heard from your friends? What are you expecting?\nIn the spirit of sharing, here’s my math autobiography."
+  },
+  {
+    "objectID": "modules/01-math-and-me/prep.html#specifications",
+    "href": "modules/01-math-and-me/prep.html#specifications",
+    "title": "Math Autobiography",
+    "section": "Specifications",
+    "text": "Specifications\nFormat: You can prepare your math autobiography using any software you wish, but you must submit it as a PDF file on Canvas. If you like using word processors, the simplest way to achieve this is to Print as PDF.\nLength: Your math autobiography should show reflection on your experiences. If you’re only writing few paragraphs, there’s more for you to think about. More than a (single-spaced) page probably isn’t necessary. If you find yourself spending more than 90 minutes on this assignment, wrap up your current sentence and submit your autobiography.\nGrading: This is our first warmup assignment. Per the syllabus, warmup assignments are graded Complete or Incomplete/Missing. For Complete, you just need to spend some careful time thinking and writing. Typos, grammar mistakes, etc. are not an issue on this assignment.\nSubmission: Please submit your math autobiography on Canvas."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#whos-in-the-room",
+    "href": "modules/00-intro/in-class.html#whos-in-the-room",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "Who’s In the Room?",
+    "text": "Who’s In the Room?\n  \nGo to menti.com\nEnter code 3390 9519\nRespond to the first prompt.\nKeep the tab open – we’ll come back to it"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section",
+    "href": "modules/00-intro/in-class.html#section",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Soooooo\n…a math class\n…in the CS department\n…?"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-2",
+    "href": "modules/00-intro/in-class.html#section-2",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "CS and Math Go Way Back\n\nAda Lovelace was an English mathematician and author of the first published computer program (1840).\nHer program was designed to compute an important sequence of mathematical constants on the “Difference Engine” designed by Charles Babbage.\nBabbage never completed his Difference Engine, so Lovelace’s program was never run.\nLovelace described her approach to math as “poetical science.”\n\n\nAda King, Countess of Lovelace. Portrait possibly by Alfred Edward Chalon, image from Wikipedia."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-3",
+    "href": "modules/00-intro/in-class.html#section-3",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "CS and Math Go Way Back\n\nAlan Turing was an English mathematician who played a major role in developing the theory of computer science and AI.\nTuring proved that some tasks are impossible for algorithms to perform, no matter how powerful or clever they are.\nThe “Nobel Prize in Computer Science” is named the Turing Award.\nTuring was chemically castrated as a punishment for homosexuality in 1953. The UK managed to apologize for this in…2009."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-4",
+    "href": "modules/00-intro/in-class.html#section-4",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "CS and Math Go Way Back\n\nJohn von Neumann was a Hungarian mathematician who guided the development of the first digital computers.\nThe “von Neumann architecture” remains the high-level architectural basis of the design of modern computers.\nIf you’re wondering what the first digital computers were used for, watch Oppenheimer. 😬😬😬"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-5",
+    "href": "modules/00-intro/in-class.html#section-5",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Ok, but…\n…what is mathematics?"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-6",
+    "href": "modules/00-intro/in-class.html#section-6",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Mathematics is the heart of AI and data science\n\n\nBrin, Sergey. “The PageRank citation ranking: bringing order to the web.” Proceedings of ASIS, 1998 98 (1998): 161-172."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-7",
+    "href": "modules/00-intro/in-class.html#section-7",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Mathematics is the heart of machine learning\n\n\nSupport Vector Machine (SVM) is an algorithm for classifying data into groups based on past observations.\nDeisenroth, Faisal, and Ong (2020). Mathematics for Machine Learning"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-8",
+    "href": "modules/00-intro/in-class.html#section-8",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Mathematics is the heart of algorithmic problem-solving\n\n    \nDijkstra’s algorithm finds shortest paths between points in a graph.\n(Used for e.g. vehicle routing)"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-9",
+    "href": "modules/00-intro/in-class.html#section-9",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Math Foundations: What You Need Now To Do All That Stuff Later"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#math-and-us",
+    "href": "modules/00-intro/in-class.html#math-and-us",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "Math and Us",
+    "text": "Math and Us\n   \nRespond to the second prompt on the Menti poll.\nIf you closed the tab, go to menti.com and enter code 3390 9519."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#in-this-class-you-will",
+    "href": "modules/00-intro/in-class.html#in-this-class-you-will",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "In This Class, You Will…",
+    "text": "In This Class, You Will…\n  \n\n\n…build a mathematical toolbox for reasoning theoretically about data structures, algorithms, and the world around you.\n…test mathematical theory against computational experiments.\n…cultivate a joyful relationship with the practice of mathematics."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#the-big-picture",
+    "href": "modules/00-intro/in-class.html#the-big-picture",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "The Big Picture",
+    "text": "The Big Picture\n\n\n\n\n\nmindmap\n  root((CSCI 0200))\n    )**Module 1**(\n        (Logic)\n          (Propositional logic)\n            (Boolean algebra)\n            (Circuit design)\n        (Sets)\n            (Set Operations)\n            (Logical quantifiers)\n    )**Module 2**(\n        (Relations)\n            (Functions)\n            (Equivalence Relations)\n        (Proof Techniques)\n            (Direct)\n            (Indirect)\n            (Contradiction)\n            (Induction)\n                (Weak)\n                (Strong)\n    )**Module 3**(\n        (Counting)\n            (Sum and product principles)\n            (Permutations and combinations)\n            (Combinatorial proofs)\n        (Recurrence Relations)\n            (Asymptotics)\n            (Divide and combine)\n    )**Module 4**(\n        (Probability)\n            (Distributions)\n                (Conditioning)\n            (Random variables)\n                (Expectation)\n        (Graphs)\n            (Special graphs)\n                (Trees )\n                (Cycles)\n            (Algorithms)"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-10",
+    "href": "modules/00-intro/in-class.html#section-10",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Your Affinity Vegetable\n \n1. Split into teams\n2. Go around and share your name and:\nIf you were a vegetable, which vegetable would you be and why?"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-11",
+    "href": "modules/00-intro/in-class.html#section-11",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Your Affinity Vegetable\n \n3. Team leader: lead your team in finding a delicious dish that incorporates all of your vegetables.\nBe ready to share!"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-12",
+    "href": "modules/00-intro/in-class.html#section-12",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "In a flipped classroom, you complete readings and watch lectures before our scheduled class time."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-13",
+    "href": "modules/00-intro/in-class.html#section-13",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Mondays and Wednesdays\nBefore Each Class (1.5-2 hrs)\n\nPrep: Videos and readings\nWarmups: practice problems, graded on completion\n\nIn Class (~1 hr)\n\nQuestions\nGroup work\nActivities\nAdditional topics, demonstrations, etc."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-14",
+    "href": "modules/00-intro/in-class.html#section-14",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Friday Labs\n\n7 total throughout the semester\nStart in class with assigned groups\nFinish as homework and submit a week later\n\nAssessment\nAssessed as Excellent (E), Meets Expectations (M), Needs Revision (R), or Not Complete (N). You want Es and Ms.\nRevision\nYou can revise and resubmit your labs after your first assessment in order to achieve a higher assessment."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-15",
+    "href": "modules/00-intro/in-class.html#section-15",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Quizzes\n\n4 total, on Fridays\nTimed for 45 minutes (contact me with DRC letters!!)\n\nLearning Targets\n\nWe have 20 Learning Targets related to core course competencies.\nYou’ll have multiple opportunities to complete each Learning Target, but you only need to do it once.\n4-6 targets are added on each quiz, but you only need to attempt ones you haven’t already gotten.\n\nFinal Exam\nIncludes opportunities to complete all 20 learning targets, with 3 hours."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-16",
+    "href": "modules/00-intro/in-class.html#section-16",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "A Typical 3-Week Module\n\n\n\n\n\ngantt\n    title A CSCI 0200 Module\n    axisFormat %A\n    tickInterval 1day\n    section Week A\n    Prep, warmup            :active, a1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, a2, 2014-01-08, 1d\n    Class         :2014-01-08, 1d\n    Prep, warmup    :active, a1, 2014-01-10, 1d\n    Lab A           :a3, 2014-01-10, 1d\n    section Week B\n    Prep, warmup            :active, a1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, a2, 2014-01-08, 1d\n    Class         :2014-01-08, 1d\n    Prep, warmup    :active, a1, 2014-01-10, 1d\n    Lab B           :a3, 2014-01-10, 1d\n    Lab A due         :done, b3, 2014-01-10, 1d\n    section Week C\n    Prep, warmup            :active, b1, 2014-01-06, 1d\n    Class            :2014-01-06, 1d\n    Prep, warmup         :active, b2, 2014-01-08, 1d\n    Class            :2014-01-08, 1d\n    Lab B due         :done, b3, 2014-01-10, 1d\n    Quiz              :crit, done, c3,  2014-01-10, 1d"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#section-17",
+    "href": "modules/00-intro/in-class.html#section-17",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "",
+    "text": "Tier\nLearning Targets\nLabs\n\n\n\n\nA\n▢ ▢ ▢ ▢\nE: ▢ ▢ ▢ ▢ M: ▢ ▢ ▢\n\n\nB\n▢ ▢\nE: ▢ ▢ M: ▢ ▢ ▢ ▢  R: ▢\n\n\nC\n▢ ▢\nM: ▢ ▢ ▢ ▢ ▢  R: ▢\n\n\nD\n▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢\nM: ▢ ▢ ▢ ▢"
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#support-resources",
+    "href": "modules/00-intro/in-class.html#support-resources",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "Support Resources",
+    "text": "Support Resources\nAcademic support\n\nStudent Hours are your time. I’m sending around a poll to help schedule Student Hours at a time that works for you.\nEvening Peer Help, hours TBD.\nOur Assistant Laboratory Instructor Smith Gakuya and Assistant In Instruction Noah Rizika holds Student Hours for CSCI 0200.\nEdStem: Online Q&A forum.\n\nClearing barriers to learning\n\nThe DRC can help you obtain a letter of accommodation for timed assessments.\nLegally, I need your letter in order to offer you accommodations."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#classroom-environment",
+    "href": "modules/00-intro/in-class.html#classroom-environment",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "Classroom Environment",
+    "text": "Classroom Environment\n \nInclusion, access, and participation are collective projects.\n\nDiscrimination is unjust and it sucks. Don’t do it.\nAddress people respectfully — chosen names and pronouns.\nDon’t leave each other behind in group work.\nBragging about something being easy just makes the people around you feel bad.\n\nAre you fast at the material? Cool. Use your ability to support the learning of the people around you.\n\nI am a mandatory reporter of potential incidents of sexual violence or harassment. There is a link to some confidential resources on the syllabus."
+  },
+  {
+    "objectID": "modules/00-intro/in-class.html#for-wednesday",
+    "href": "modules/00-intro/in-class.html#for-wednesday",
+    "title": "Welcome  to CSCI 0200!",
+    "section": "For Wednesday",
+    "text": "For Wednesday\n \nEntrance Survey: tell me about yourself and help me find your teammates for lab.\nStudent Hours Scheduling Poll: let me know when you’re available for Student Hours.\nMath autobiography: your history as a learner and user of mathematics.\nThese assignments are on Canvas."
+  },
+  {
+    "objectID": "pages/minor-errors.html",
+    "href": "pages/minor-errors.html",
+    "title": "What Makes an Error “Minor”?",
+    "section": "",
+    "text": "© Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "pages/checkbox-table.html",
+    "href": "pages/checkbox-table.html",
+    "title": "Calculating Your Grade",
+    "section": "",
+    "text": "Calculating Your Grade\nYou can use the table below to visualize your progress based on your quiz problems and the assignment feedback you’ve received. This table doesn’t take into account penalties for missing warmups.\nInstructions:\n\nCheck off Learning Targets as you go, starting from the bottom. For example, once you’ve checked off 6 learning targets you have filled the “C” row, and once you’ve checked off 8 learning targets you have filled the “B” row.\nCheck off Labs as you get receive feedback. When you receive an assessmment on a lab, you can check off that lab up to once in each grade tier. For example, if you receive an M, you can check off one box for “M or E” in each of Tiers A, B, and C. If you receive an E, you can check off one box for E in Tiers A and B, and one box for M or E in Tier C. R’s can only be used to check off boxes in the second row of Tier C.\n\nOnce all boxes in a row are checked, you have earned that grade in the course, provided that you have missed no more than 3 warmup activities.\n\n\n\n\n\n\n\n\nTier\nLearning Targets\nLabs\n\n\n\n\nA\n▢ ▢ ▢ ▢\nE: ▢ ▢ ▢ ▢ M: ▢ ▢ ▢\n\n\nB\n▢ ▢\nE: ▢ ▢ M: ▢ ▢ ▢ ▢  R: ▢\n\n\nC\n▢ ▢\nM: ▢ ▢ ▢ ▢ ▢  R: ▢\n\n\nD\n▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢ ▢\nM: ▢ ▢ ▢ ▢\n\n\n\n\n\n\n\n  © Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "pages/acknowledgements.html",
+    "href": "pages/acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "The assessment system for this course is closely modeled on Peter-Michael Osera’s offering of CSC 208-01: Discrete Mathematics at Grinnell College.\nMany of the videos used in this course were created by Dr. Trefor Bazett at the University of Victoria. Dr. Bazett kindly posted these videos on YouTube for public use.\nI learned of many of the videos and readings used in this course from Chad Topaz’s offering of MATH-200: Discrete Mathematics at Williams College.\nMy approach to Bloom’s taxonomy and assignments/class time is inspired by this blog post by Robert Talbert.\nMany learning targets are adapted from Robert Talbert’s targets from an offering of MTH 225: Discrete Mathematics at Grand Valley State University.\n\n\n\n  © Phil Chodrow, 2024",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "pages/collaboration.html",
+    "href": "pages/collaboration.html",
+    "title": "Collaboration And Academic Honesty",
+    "section": "",
+    "text": "This is a page of general principles and guidelines that apply in courses I (Phil Chodrow) teach at Middlebury College. It is lightly adapted from the handout “Collaborating on Mathematics” by the Harvey Mudd Department of Mathematics, which I discovered in a Tweet by Francis Su.\nIn any case in which the guidelines and principles on this page conflict with the policies of a specific course, the policies of the specific course should be followed. For example, if the course syllabus says that collaboration is not permitted on homeworks, then collaboration is not permitted on homeworks, regardless of anything written here.\n© Phil Chodrow, 2024"
+  },
+  {
+    "objectID": "pages/collaboration.html#why-collaborate",
+    "href": "pages/collaboration.html#why-collaborate",
+    "title": "Collaboration And Academic Honesty",
+    "section": "Why Collaborate?",
+    "text": "Why Collaborate?\nMost scientists and engineers don’t work on their own; they work with colleagues and students while doing and publishing research. Increasingly, open problems in science and engineering require multiple skill sets and areas of expertise. Because of this, the need to collaborate will only increase in the future. This is why several of CS@Midd’s learning goals are explicitly focused on communication and collaboration. We want our students to have strong professional and communication skills, to be able to function well as part of a team, and to be able to work and communicate with diverse groups of people."
+  },
+  {
+    "objectID": "pages/collaboration.html#collaborating-on-homework-and-other-individually-assessed-assignments",
+    "href": "pages/collaboration.html#collaborating-on-homework-and-other-individually-assessed-assignments",
+    "title": "Collaboration And Academic Honesty",
+    "section": "Collaborating on Homework and Other Individually-Assessed Assignments",
+    "text": "Collaborating on Homework and Other Individually-Assessed Assignments\n\n(COLLABORATION IS A LIFE SKILL) Understand that working with others and asking for assistance are not signs of weakness or deficiency; rather, they are essential life skills important for making progress in any discipline, including computer science. Our department wants you to develop these skills. If you’re too shy to come to my office hours or to join a group of people working on their homework, ask a friend to come with you.\n(COLLABORATIONS BENEFIT FROM DIVERSITY) Open yourself up to working with people whom you don’t know (yet). You might find someone you work really well with and who doesn’t think exactly like you do. A wide range of experiecnes and backgrounds is beneficial in problem solving, although it may be helpful to find folks who can work on assignments during the same time of day and at roughly the same pace. If you’re having trouble finding people to work with, I can help!\n(COLLABORATIONS ARE INCLUSIVE) Believe that everyone has something meaningful to contribute (you included), and that you have something to learn from each person. This can be a difficult state of mind to achieve, but critical for healthy, effective collaboration. Here are some practical consequences:\n\nIn any group setting, listen carefully for everyone’s contributions. Don’t dismiss or ignore what someone says, and don’t move on until you’ve considered it carefully. If what is said doesn’t make sense to you, that doesn’t necessarily mean it’s incorrect–the person might just have a way of approaching the problem that is different and not yet clear to you. Furthermore, even ideas that ultimately turn out to be incomplete or incorrect are often still useful building blocks towards a successful approach.\nFind ways to verbally validate the ideas of others. For example: “One really neat feature of Zenith’s approach to part (b) is that it also works with a small modification for part (c).”\nIf someone in the group hasn’t spoken for a while, ask for their ideas or opinions. Conversely, if you find yourself talking a lot, take a step back and allow someone else to contribute to the discussion.\n\n(COLLABORATIONS REQUIRE PREPARATION) Don’t seek help from others on a probem before you’ve had time to think about it yourself, try at least one approach, and formulate the obstacle as clearly as you can. But at the same time, if you find yourself frustrated with a problem and you’re not making progress, don’t wait too long before you look for help from your classmates, your tutors, or me.\n(COLLABORATIONS GENERATE DEEPER UNDERSTANDING) Don’t be satisfied with only producing the correct final result; use your collaboration to push each other to understand:\n\nWhy does this approach work?\nWhat alternative approaches would also have worked?\nWhat are some of the merits and drawbacks of these different approaches?\n\n(COLLABORATIONS ARE EMPOWERING) Good collaborations empower people towards further growth.\n\nWhen you’re working on a problem with others and you find a path before everyone else, avoid ruining the experience of discovery for others. Conversely, if you haven’t figured out something yet and want to enjoy the discovery for yourself, don’t let someone else ruin your joy.\nIf someone asks you for help, don’t just tell them the answer or start showing them a solution method. Listen carefully to their question. Ask for more information if they aren’t being specific enough. If they say “I don’t know where to start,” ask them to tell you about their understanding of what the question is asking and which parts of it seem most puzzling. Ask guiding questions to help them discover ideas for themselves. In these situations, you have the opportunity to learn how to help others learn – this is an invaluable life skill.\n\n(COLLABORATIONS ACKNOWLEDGE CONTRIBUTORS) Whenever you’ve received help on a homework assignment from a classmate, a friend, a tutor, or me, acknowledge the support and briefly describe how it helped you in your assignment.\n\nThe reason I ask you to acknowledge tutors and myself is actually different from the reason I ask you to acknowledge classmates and friends. For classmates and friends, it’s about cultivating transparency and integrity. The primary reason I want you to acknowledge tutors and myself is that the exercise of explicitly remembering and reflecting on your learning journey is part of metacognition, a valuable set of practices that will help you succeed in this class, in college, and in your long-term career."
+  },
+  {
+    "objectID": "pages/collaboration.html#collaborating-on-group-projects",
+    "href": "pages/collaboration.html#collaborating-on-group-projects",
+    "title": "Collaboration And Academic Honesty",
+    "section": "Collaborating on Group Projects",
+    "text": "Collaborating on Group Projects\n\n(COLLABORATIONS SET GOOD EXPECTATIONS) Establish clear expectations and ways of communicating with each other to avoid misunderstandings. When, where, and how often will you meet? How can you reach each other in case of an emergency?\n(COLLABORATION IS NOT DIVISION OF LABOR) Collaboration is not the same as splitting up a problem into pieces and then slapping the completed pieces together.\n\nIdentify the parts of the problem that need to be completed together and the parts that can be completed individually.\nWork toward a final product that everyone is happy with and that represents the contributions of everyone on the group.\nDon’t just divide up the work based on who might have the most experience or skill with each part of the problem. Let those who want to develop their skills also have a chance to work on pieces that are unfamiliar to them\n\n(COLLABORATIONS ARE EQUITABLE) Aim for each person to contribute a fair and equitable amount of effort and/or time to the group’s deliverables.\n(COLLABORATIONS RESOLVE CONFLICT QUICKLY) Resolve any misunderstands between the team members quickly. Don’t let those misunderstandings fester into distrust, resentment, or anger. Don’t be afraid to ask your professor for help in resolving interpersonal conflict in your team. While this can feel uncomfortable, often these kinds of situations are important opportunities for everyone to learn more about how to coexist as collaborative, whole humans."
+  },
+  {
+    "objectID": "pages/collaboration.html#collaboration-is-a-skill",
+    "href": "pages/collaboration.html#collaboration-is-a-skill",
+    "title": "Collaboration And Academic Honesty",
+    "section": "Collaboration is a Skill",
+    "text": "Collaboration is a Skill\nYou might imagine that you already know whether you need to collaborate and how to do it. And indeed, there’s a lot you know already! But collaboration is a skill, and like other skills it rewards practice and growth. Effective collaboration involves perspective-taking, empathy, respect, and clear communication. We hope that you will find that the benefits of collaboration far outweigh its challenges."
+  },
+  {
+    "objectID": "pages/collaboration.html#collaboration-and-the-middlebury-honor-code",
+    "href": "pages/collaboration.html#collaboration-and-the-middlebury-honor-code",
+    "title": "Collaboration And Academic Honesty",
+    "section": "Collaboration and the Middlebury Honor Code",
+    "text": "Collaboration and the Middlebury Honor Code\nThe Middlebury Honor Code’s preamble states that:\n\nThe students of Middlebury College believe that individual undergraduates must assume responsibility for their own integrity on all assigned academic work…The Middlebury student body, then, declares its commitment to an honor system that fosters moral growth and to a code that will not tolerate academic dishonesty in the College community.\n\nIn any assignment in which you receive a grade individually (homeworks, exams), the purpose of the grade is to measure your learning and achievement. When you turn in such an assignment, you implicitly represent that work as work that you are able to complete yourself under the stated conditions (which may include getting help or working with others). If you cannot complete some work under the stated collaboration conditions, it is dishonest to turn in that work.\nWhen working individually, it is your responsibility to uphold the Code’s standards of integrity and academic honesty. When working in a group, it is additionally your responsibility to ensure that your group as a whole upholds these standards.\nIf you have a question about whether some form of collaboration is permitted, just ask!\n\nWhat Happens if I Observe an Honor Violation?\n\nWe all fail to uphold our highest moral aspirations at times. If you show lack of integrity or academic honesty, that doesn’t mean you’re a bad person. It means that you’re under pressure and chose the course of action that looked like the most workable one to you at the time.\nThat said, if you show lack of integrity or academic honesty, that’s an indicator that you have an opportunity for some very important growth.\nIt is part of my job to help you achieve that growth. I take this part of my job very seriously. In order to help you on your journey, I will connect both of us with the Middlebury Community Standards Office. Office leadership will help us all find a path that helps you grow toward integrity and honesty.\nThis is an awkward and uncomfortable process for everyone involved. You don’t want this."
+  },
+  {
+    "objectID": "private-notes.html",
+    "href": "private-notes.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "What are the mathematical foundations of computing? What role does mathematics play in computing?\n\nMathematical reasoning about models of computation. What kinds of computations are possible? (301)\nMathematical reasoning about algorithms. How do we know that an algorithm does what it’s supposed to do? In what cases does a given algorithm work? How do we know how fast it is? (302, 451, 461, other)\n\nStandard discrete math\nLinear algebra\nMultivariable calculus\nProbability\n\nThinking about the world mathematically\n\nThis is not about computer science exactly but it can help for things like social impacts, plus it’s fun!\nMaybe can connect to responsible computing\n\n\nFor models of computation, the core skills are:\n\nProof\nRecursion\n\nFor algorithms, the additional core skills are:\n\nCounting\nElementary probability\nGraphs/networks\n\nReasoning about the world mathematically:\n\nApplications of networks and probability\n\n\nLearning Objectives\n\n\n\n\n  © Phil Chodrow, 2024"
+  }
+]

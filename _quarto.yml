@@ -1,0 +1,40 @@
+project:
+    type: website
+    output-dir: docs
+    resources:
+        - "lecture-scripts/*"
+        - "assignments"
+        - "lecture-notes/*.ipynb"
+
+website:
+    body-footer: |
+        <br> <br> <span style="color:grey;">&#169; Phil Chodrow, 2024</span>
+    sidebar:
+        # title: "Contents"
+        style: "docked"
+        collapse-level: 1
+        border: true
+        contents:
+            - syllabus.qmd
+            - schedule.qmd
+            - text: "Learning Targets"
+              href: pages/learning-targets.qmd
+            - section: "Additional Pages"
+              contents:
+                  - pages/llms.qmd
+                  - pages/mask-policy.qmd
+            - pages/acknowledgements.qmd
+    favicon: assets/icons/favicon.png
+
+format:
+    html:
+        theme: [cosmo, assets/css/custom.scss]
+        css: assets/css/styles.css
+        toc: true
+        number-depth: 0
+        reference-location: margin
+        callout-icon: false;
+        callout-appearance: simple
+
+execute:
+    cache: true

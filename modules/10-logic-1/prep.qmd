@@ -1,0 +1,46 @@
+---
+title: "Preparation: Logical Statements and Truth Tables"
+---
+
+*Starting today, we are going to start introducing new course content through videos, readings, and warmup problems. Today's prep is shorter than usual and should take a little more than an hour.*
+
+# Videos (~25 mins)
+
+- [Logical Propositions](https://youtu.be/JD3riQ_E8ow) (7:34)
+- [Logical Operators and Truth Tables](https://youtu.be/rp4sxXkftvo) (12:38)
+- [Logical Equivalence](https://youtu.be/WWyIKGgwfOI) (4:28)
+
+# Reading (~20 mins)
+
+- [DMOI Chapter 0.2](https://discrete.openmathbooks.org/dmoi3/sec_intro-statements.html) from the beginning through Example 0.2.3
+- [DMOI Chapter 3.1](https://discrete.openmathbooks.org/dmoi3/sec_propositional.html), from the beginning up through Example 3.1.3.
+
+## Optional Reading: 
+
+*This reading covers the same material but has more examples from theoretical mathematics*.
+
+- [BOP 2.1-2.2](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf#page=46)
+
+
+# Warmup Problems (~30 mins) 
+
+*Please complete these problems "by hand," without typing. Pencil/pen and paper is best practice for the quiz, but using a stylus with a tablet is also fine. Then, scan/photograph or otherwise produce an image of your solutions and upload them to Canvas.*
+
+
+
+### Problem 1
+ 
+{{< include ../../problems/logic/truth-tables-1.qmd >}}
+ 
+### Problem 2
+
+{{< include ../../problems/logic/python-to-logic-1.qmd >}}
+
+*Optionally*, you might be interested to check the final column of your truth table in Python. Here's some code you can run in Thonny or any other Python environment. You'll need to also include the definition of the function `f` above. 
+  
+```python
+import itertools
+tf = [True, False]
+for p, q, r in itertools.product(tf, tf, tf): 
+    print(p, q, r, f(p, q, r))
+```

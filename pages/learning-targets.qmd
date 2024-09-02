@@ -1,0 +1,194 @@
+---
+title: Learning Targets
+---
+
+ 
+## Logic and Set Theory
+
+<table>
+    <tr>
+        <th>
+            L1:
+        </th>
+        <td>
+            I can use quantified logic to express English sentences and mathematical concepts.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            L2:
+        </th>
+        <td>
+            I can correctly simplify logical expressions which include quantifiers, negations (NOT), conjunctions (AND), disjunctions (OR), and implications.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            L3:
+        </th>
+        <td> 
+            I can use rules of logical inference to determine whether a conclusion follows logically from a set of premises. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            S1:
+        </th>
+        <td>
+            I can describe sets using both roster and set-builder notations. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            S2:
+        </th>
+        <td>
+            I can perform operations on sets (union, intersection, difference, complement) and determine the cardinality of a set.
+        </td>
+    </tr>
+</table>
+
+## Proof-Writing
+
+<table>
+    <tr>
+        <th>
+            PF1: 
+        </th>
+        <td>
+            I can use the element method to prove that one set is a subset of another, or that two sets are equal. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF2:
+        </th>
+        <td>
+            I can prove mathematical statements using proof-by-contradiction.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF3:
+        </th>
+        <td>
+            I can correctly state the base case and inductive hypothesis in a proof by weak induction. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF4:
+        </th>
+        <td>
+            I can prove the base case and inductive hypothesis in a proof by weak induction when they are supplied to me. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF5:
+        </th>
+        <td>
+            I can write a complete proof by weak induction. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PF6:
+        </th>
+        <td>
+            I can write a complete proof by strong induction.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            FR1:
+        </th>
+        <td>
+            I can prove that a supplied relation is or is not an equivalence relation.
+        </td>
+    </tr>
+</table>
+
+
+## Counting
+
+<table>
+    <tr>
+        <th>
+            C1: &nbsp;
+        </th>
+        <td>
+            I can use the principles of addition, multiplication, and inclusion-exclusion to solve counting problems. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            C2:
+        </th>
+        <td>
+            I can use permutations and combinations to count the number of candidate solutions to a given problem. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            R1:
+        </th>
+        <td>
+            I can describe a mathematical process or algorithm using a recurrence relation. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            R2:
+        </th>
+        <td>
+            I can use the tree method to determine the asymptotic runtime of a recursive algorithm. 
+        </td>
+    </tr>
+</table>
+
+
+## Probability
+
+<table>
+    <tr>
+        <th>
+            PR1:
+        </th>
+        <td>
+            I can evaluate marginal, and joint probabilities of events on discrete sample spaces. 
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PR2:
+        </th>
+        <td>
+            I can use Bayes' Theorem to evaluate conditional probabilities.
+        </td>
+    </tr>
+    <tr>
+        <th>
+            PR3:
+        </th>
+        <td>
+            I can evaluate expectations of random variables on discrete sample spaces. 
+        </td>
+    </tr>
+</table>
+
+## Graphs 
+
+<table>
+    <tr>
+        <th>
+            G1:
+        </th>
+        <td>
+            I can write correct proofs of simple mathematical propositions about the structure of graphs. 
+        </td>
+    </tr>
+</table>
+
+
+

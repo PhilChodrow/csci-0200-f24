@@ -1,0 +1,21 @@
+---
+listing: 
+  id: schedule
+  contents: schedule.yml
+  template: assets/ejs/schedule.ejs
+toc: false 
+title: Schedule      
+--- 
+
+*This schedule is tentative and subject to change*.  
+
+Warmups are due **every class day**, even if they are not listed under the "Due" column.                 
+
+                        
+:::{#schedule}                     
+:::      
+ 
+## Final Exam  
+  
+Our final exam will be another quiz covering all twenty Learning Targets. So, it's just like Quiz 4, except you'll have 3 hours instead of 50 minutes.         
+             

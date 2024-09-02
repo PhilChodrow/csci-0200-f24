@@ -1,0 +1,27 @@
+---
+title: "Math Autobiography"
+---
+
+*This assignment is adapted from [Dr. Spencer Bagley](https://westminsteru.edu/campus-directory/directory-profiles/bagley-spencer.html) at Westminster University.* 
+
+Your first assignment for CSCI 0200 is to write a short *mathematical autobiography*. 
+
+The purpose of this assignment is for you to reflect on your experiences with mathematics. We'll be encountering a lot of different kinds of mathematics in this course, and relating that mathematics to our lives and our interests in computation. We'll both get more out of this encounter if we understand what mathematical experiences you're bringing with you. 
+
+## Prompt
+
+Describe your history as a learner and user of mathematics. You might include things like: experiences with teachers (at any level, in any course), good or bad teachers (and what made them good or bad), how your attitude towards mathematics has changed over the years, whether you like mathematics or not, what feels *good* about doing math, what feels *bad* about doing math. 
+
+Please conclude your autobiography with a brief paragraph describing how you're feeling about starting CSCI 0200. Are you nervous? Excited? What have you heard from your friends? What are you expecting? 
+
+In the spirit of sharing, here's [my math autobiography](https://www.philchodrow.prof/math-autobiography.html).
+
+## Specifications
+
+**Format**: You can prepare your math autobiography using any software you wish, but you must submit it as a PDF file on Canvas. If you like using word processors, the simplest way to achieve this is to Print as PDF. 
+
+**Length**: Your math autobiography should show reflection on your experiences. If you're only writing few paragraphs, there's more for you to think about. More than a (single-spaced) page probably isn't necessary. If you find yourself spending more than 90 minutes on this assignment, wrap up your current sentence and submit your autobiography. 
+
+**Grading**: This is our first *warmup assignment*. Per [the syllabus](../../../syllabus.qmd), warmup assignments are graded *Complete* or *Incomplete/Missing*. For *Complete*, you just need to spend some careful time thinking and writing. Typos, grammar mistakes, etc. are not an issue on this assignment. 
+
+**Submission**: Please submit your math autobiography on Canvas. 

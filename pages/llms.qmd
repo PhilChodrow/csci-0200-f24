@@ -1,0 +1,28 @@
+---
+tbl-cap-location: margin
+title: More on Language Models
+callout-icon: false
+---
+
+LLMs represent many dramatic technical achievements in algorithms, machine learning, statistics, human-computer interaction (HCI), chip-design, and many other fields. They are impressive artifacts! Anyone who tells you LLMs are not impressive technical achievements is not looking carefully. 
+
+#### However...
+
+- You are being [routinely](https://analyticsindiamag.com/did-google-bard-really-learn-bengali-on-its-own/) [misled](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4441311) about LLMs by [secretive](https://www.aisnakeoil.com/p/openais-policies-hinder-reproducible) actors who want you to believe these models are more capable than they are. 
+- The labor required for reinforcement learning with human feedback is [low-paying](https://www.theverge.com/features/23764584/ai-artificial-intelligence-data-notation-labor-scale-surge-remotasks-openai-chatbots), [deeply traumatizing](https://www.wsj.com/articles/chatgpt-openai-content-abusive-sexually-explicit-harassment-kenya-workers-on-human-workers-cf191483), and disproportionately falls on the Global South. 
+- LLMs are already leading to degradation in [online information ecosystems](https://www.similarweb.com/blog/insights/ai-news/stack-overflow-chatgpt/), [human creative production](https://www.npr.org/2023/02/24/1159286436/ai-chatbot-chatgpt-magazine-clarkesworld-artificial-intelligence), and [environmental](https://arxiv.org/abs/2302.08476) [resources](https://gizmodo.com/chatgpt-ai-water-185000-gallons-training-nuclear-1850324249). 
+- While boosters promise more [leisure](https://www.cnbc.com/2018/01/29/bill-gates-artificial-intelligence-could-mean-longer-vacations.html) and [creative opportunity](https://twitter.com/sama/status/1627110888321978368?s=20), the long-term trend of automation and AI is to [reduce wages](https://www.forbes.com/sites/jackkelly/2021/06/18/artificial-intelligence-has-caused--50-to-70-decrease-in-wages-creating-income-inequality-and-threatening-millions-of-jobs/?sh=6bc1e5c41009). Generative language models are already contributing to [layoffs](https://www.cbsnews.com/news/ai-job-losses-artificial-intelligence-challenger-report/). 
+- Companies training LLMs [are stealing from authors and publishers](https://qz.com/openai-books-piracy-microsoft-meta-google-chatgpt-bard-1850757064) to assemble their training data. 
+- LLMs systematically reproduce harmful stereotypes along axes of [gender](https://www.aisnakeoil.com/p/quantifying-chatgpts-gender-bias) and [race](https://twitter.com/spiantado/status/1599462375887114240?ref_src=twsrc%5Etfw).
+- Increases in the amount of resources required to train LLMs are [concentrating power](https://www.nytimes.com/2019/09/26/technology/ai-computer-expense.html) in the hands of a small number of tech corporations. 
+- LLMs regularly generate responses that are [humorously](https://www.cnn.com/2023/05/27/business/chat-gpt-avianca-mata-lawyers/index.html) or [dangerously](https://www.vice.com/en/article/qjvk97/eating-disorder-helpline-disables-chatbot-for-harmful-responses-after-firing-human-staff) wrong. 
+
+
+### LLMs Are Like Cars
+
+I encourage you to **think of LLMs like you think about gas cars**. 
+
+- Like cars, LLMs *can* be extremely helpful. One day, it might even be necessary to use LLMs in your daily life. 
+- Like cars, every time you use an LLM you make a small contribution toward environmental degradation. 
+- [As with fossil-fuel cars](https://www.theguardian.com/tv-and-radio/2022/apr/20/what-we-now-know-they-lied-how-big-oil-companies-betrayed-us-all), large companies with profit motives are regularly misleading you about the impacts and harms of this technology. 
+- Like cars, LLMs can get you where you're going faster. But by going fast, you might miss out on important joy, learning, or experience. 
