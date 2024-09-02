@@ -17,5 +17,5 @@ scans
 evaluations
 warmup-solutions
 labs
+!docs/labs
 /env/
-*_files
