@@ -148,3 +148,8 @@ tr {
       margin-right: 0;
     }
   }
+
+.hide {
+  border-left: thick solid #c251a5;
+  padding-left: 1rem; 
+}

@@ -1,5 +1,11 @@
 ---
 title: "Preparation: Logical Statements and Truth Tables"
+format: 
+  html: default
+  pdf: 
+    callout-icon: false
+    callout-appearance: simple
+format-links: false
 ---
 
 *Starting today, we are going to start introducing new course content through videos, readings, and warmup problems. Today's prep is shorter than usual and should take a little more than an hour.*

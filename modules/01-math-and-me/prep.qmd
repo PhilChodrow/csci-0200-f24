@@ -1,5 +1,6 @@
 ---
 title: "Math Autobiography"
+format-links: false
 ---
 
 *This assignment is adapted from [Dr. Spencer Bagley](https://westminsteru.edu/campus-directory/directory-profiles/bagley-spencer.html) at Westminster University.* 
