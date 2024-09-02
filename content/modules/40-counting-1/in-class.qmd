@@ -1,5 +1,0 @@
----
-title: "In-Class Activity: Introduction to Counting"
----
-
-{{< include ../../../content/problems/counting/noonies.qmd >}} 

@@ -1,6 +1,0 @@
----
-title: "In-Class: Asymptotics"
----
-
-
-{{< include ../../../content/problems/asymptotics/log-n.qmd >}}

@@ -1,8 +1,0 @@
-# In Class: The Tower of Hanoi
-
-## Learning Objectives
-
-- You will formulate a simple recursive algorithm to solve a puzzle. 
-- You will use recurrence relations and proof by induction to describe the runtime of your algorithm. 
-
-{{< include ../../../content/problems/recursion-recurrence/hanoi.qmd >}}

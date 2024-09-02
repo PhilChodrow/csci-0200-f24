@@ -1,3 +1,0 @@
-# In Class: Bayes' Rule and DNA Testing
-
-{{< include ../../problems/probability/dna-testing.qmd >}} 

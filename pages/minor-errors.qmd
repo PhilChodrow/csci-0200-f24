@@ -1,5 +1,0 @@
----
-title: What Makes an Error "Minor"?
-callout-icon: false
----
-

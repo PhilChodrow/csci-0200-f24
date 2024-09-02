@@ -1,6 +1,0 @@
----
-title: Practice with Quantified Logic
----
-
-
-
